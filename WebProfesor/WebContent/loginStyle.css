@@ -102,16 +102,13 @@ ul, ol {
 	list-style:none;
 }
 
-.nav > li {
-	float:none;
-}
 
 .nav li a {
 	display:block;
 }
 
 .nav li a:hover {
-	background-color:#434343;
+	background-color:#322860;
 }
 
 .nav li ul {
@@ -132,3 +129,14 @@ ul, ol {
 	right:-140px;
 	top:0px;
 }
+
+.nav-tabs a{
+	font-family: "Roboto", sans-serif;
+ 	outline: 0;
+	color:white;
+	background: #40339e;
+	cursor:auto;	
+}
+
+
+
