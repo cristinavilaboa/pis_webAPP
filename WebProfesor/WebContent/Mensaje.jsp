@@ -8,8 +8,14 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="loginStyle.css" media="screen" />
 <title>Insert title here</title>
+<script type="text/javascript">
+function cargarMensaje(){
+	
+}
+
+</script>
 </head>
-<body>
+<body onload="">
 	<div class = "login-page">
 		<div >
 			<div class="form" >
