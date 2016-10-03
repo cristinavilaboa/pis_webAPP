@@ -34,7 +34,7 @@ function cargarMensajes(){
 	
 		$.each(msjs, function (index, item) {
     		var eachrow = "<tr>"
-                + "<td> <a href=Mensaje.html>" + item.remitente + "</a></td>"
+                + "<td> <a href=Mensaje.jsp>" + item.remitente + "</a></td>"
                 + "<td>" + item.asunto + "</td>"
                 + "<td>" + item.fecha + "</td>"
                 + "</tr>";
@@ -62,7 +62,7 @@ function cargarMensajes(){
 	
 		$.each(msjs2, function (index, item) {
   			var eachrow = "<tr>"
-              + "<td> <a href=Mensaje.html>" + item.remitente + "</td>"
+              + "<td> <a href=Mensaje.jsp>" + item.remitente + "</td>"
               + "<td>" + item.asunto + "</td>"
               + "<td>" + item.fecha + "</td>"
               + "</tr>";
