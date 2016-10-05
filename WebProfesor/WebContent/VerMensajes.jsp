@@ -16,7 +16,7 @@
 <script type="text/javascript">
 function cargarMensajes(){
 
-//cargar mensajes nuevos
+//---------------cargar mensajes nuevos------------
 	var settings = {
 		"async": true,
 		"crossDomain": true,
@@ -33,18 +33,26 @@ function cargarMensajes(){
 		var msjs= response.mensajes;
 	
 		$.each(msjs, function (index, item) {
+			
+			var dateStr = JSON.parse(item.fecha);          
+			var date = new Date(dateStr);
+			
     		var eachrow = "<tr>"
-                + "<td> <a href=Mensaje.jsp>" + item.remitente + "</a></td>"
+                + "<td> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
                 + "<td>" + item.asunto + "</td>"
-                + "<td>" + item.fecha + "</td>"
+                + "<td>" + date.toDateString() + "</td>"
                 + "</tr>";
     		$('#tbodynuevos').append(eachrow);
+    		
+    		var url = "Mensaje.jsp?source=" + item.id;
+    		$("#"+item.id).attr("href",url);
 		});
+		
 	});	
 
 
 
-//cargar mensajes viejos
+//------------cargar mensajes viejos-------------------
 	var settings2 = {
 		"async": true,
 		"crossDomain": true,
@@ -59,24 +67,53 @@ function cargarMensajes(){
 
 	$.ajax(settings2).done(function (response) {
 		var msjs2= response.mensajes;
-	
+		
+		//var date= JSON.parse(json,JSON.dateParser);
+		//alert(date);
+		
 		$.each(msjs2, function (index, item) {
+			
+			var dateStr = JSON.parse(item.fecha);          
+			var date = new Date(dateStr);
+			//alert(date);
+			
   			var eachrow = "<tr>"
-              + "<td> <a href=Mensaje.jsp>" + item.remitente + "</td>"
+              + "<td> <a id=" + item.id + " href=#>" + item.remitente + "</a>" + "</td>"
               + "<td>" + item.asunto + "</td>"
-              + "<td>" + item.fecha + "</td>"
-              + "</tr>";
+              + "<td>" + date.toDateString() + "</td>"
+              + "</tr>" ;
+              
+              /*var newUrl = document.getElementById(index).href;
+              newUrl = newUrl.replace("#", "Mensaje.jsp?source=" + item.id);
+              document.getElementById(index).href = newUrl;*/
+
+            
   			$('#tbodyviejos').append(eachrow);
+  
+  			var url = "Mensaje.jsp?source=" + item.id;
+    		$("#"+item.id).attr("href",url);
+    		
 		});
+		
+		/*$.each(msjs2, function (index, item) {
+				
+		});
+		
+		$('<td> <a>').each(function (index, value){
+			if (('href'!="#menu1")&&('href'!="#home")){
+				$(this).attr("href","Mensaje.jsp?source=" + index);
+			}
+			});*/
 	});	
-	
 }
+
+
 
 </script>
 
 </head>
 <body onload="cargarMensajes()">
-	  <div class="login-page"> 
+	  <div class="login-page" style="width: 720px"> 
 		<div>
 			<div id="div1" class="form">
 				 <h2 style="font-family: serif;">Mensajes</h2> 
