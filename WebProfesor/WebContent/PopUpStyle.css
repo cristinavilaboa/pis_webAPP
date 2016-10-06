@@ -2,7 +2,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 80px; /* Location of the box */
     margin: 0 auto;
     left: 0;
     top: 0;
@@ -16,11 +16,11 @@
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 50px auto;
+    margin: 20px auto;
     text-align:center;
-    padding: 20px;
+    padding: 10px;
     width:80%;
-    height:60%;
+    height:80%;
     border: 1px solid #888;
     position: relative;
 }
