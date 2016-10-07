@@ -31,53 +31,45 @@ function cargarMensaje(){
 	
 	//---------------obtengo el mensaje con el id  y lo cargo------------
 	var settings = {
-			  "async": true,
-			  "crossDomain": true,
-			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensaje?id_mensaje=" + param,
-			  //"url": "http://localhost:8080/Servidor/vermensaje?nick=marce_fing&id_mensaje=" + param,
-			  "method": "GET",
-			  "dataType": 'jsonp',
-			  "headers": {
-				  "Access-Control-Allow-Origin": "*",
-				  "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
-				  "cache-control": "no-cache",
-			  },
-				success: function(response) {
-        		alert(response);
-        			return response;        
-     			 },
-    			error: function() {
-        			alert('ajax error');
-      }
-			}
+  		"async": true,
+  		"crossDomain": true,
+  		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensaje?id_mensaje=" + param,
+		  //"url": "http://localhost:8080/Servidor/vermensaje?nick=marce_fing&id_mensaje=" + param,
+  		"method": "GET",
+  		"headers": {
+  			"Access-Control-Allow-Origin": "*",
+    		"cache-control": "no-cache",
+  			}
+		}
 
-			$.ajax(settings).done(function (response) {
-			 	var mensaje=response;
-			 	$("#asunto").text("Asunto: " + mensaje.asunto);
-			 	$("#remitente").text("Remitente: " + mensaje.remitente);
-			 	$("#contenido").text(mensaje.contenido);
+	$.ajax(settings).done(function (response) {		    	    			    	    
+		var mensaje= response;
+			    
+		$("#asunto").text("Asunto: " + mensaje.asunto);
+		$("#remitente").text("Remitente: " + mensaje.remitente);
+		$("#contenido").text(mensaje.contenido);
 			 	
-			 	var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
-	    		$("#responder").attr("href",url);
+		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
+	    $("#responder").attr("href",url);
 			 	
 
-			});
+	});
 	
 	//------------marcar mensaje como leido--------------
 	var settings = {
-			  "async": true,
-			  "crossDomain": true,
-			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
-			  //"url": "http://localhost:8080/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
-			  "method": "POST",
-			  "headers": {
-				"Access-Control-Allow-Origin": "*",
-			    "cache-control": "no-cache",
-			  }
-			}
+		"async": true,
+		"crossDomain": true,
+		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje=" + param,
+	  //"url": "http://localhost:8080/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
+		"method": "POST",
+		"headers": {
+			"Access-Control-Allow-Origin": "*",
+			"cache-control": "no-cache",
+		}
+	}
 
-			$.ajax(settings).done(function (response) {
-			  //console.log(response);
+	$.ajax(settings).done(function (response) {
+		//console.log(response);
 			});
 	
 }
@@ -94,7 +86,7 @@ function cargarMensaje(){
 				<p id=contenido style="text-align: left"> </p>
 				<br>
     			<div>
-    				<a id="responder" href=#>Responder </a>
+    				<a id="responder" href=# class="enlaceboton">Responder </a>
     			</div>
 			</div>
 		</div>

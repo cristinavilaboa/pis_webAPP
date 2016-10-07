@@ -16,74 +16,37 @@
 <script type="text/javascript">
 function cargarMensajes(){
 
-//---------------cargar mensajes nuevos------------
+//---------------cargar mensajes nuevos------------	
 	var settings = {
-		"async": false,
+		"async": true,
 		"crossDomain": true,
 		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
-		//"url": "http://localhost:8080/Servidor/vermensajesnuevos?nick=marce_fing",
+	  	//"url": "http://localhost:8080/Servidor/vermensajesnuevos?nick=marce_fing",
 		"method": "GET",
-		"dataType": 'jsonp',
 		"headers": {
-		"Access-Control-Allow-Origin": "*",
-		"Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
-		
-		"cache-control": "no-cache",
-			},
-		success: function(response) {
-			        alert(response);
-			        return response;        
-			      },
-		error: function() {
-			        alert('ajax error');
-			      }
-		} 
-		
-		/*
-		$.ajax({
-			accepts: {json: "application/json"}, //With WCF 4.0, you can add an attribute called automaticFormatSelectionEnabled which allows the service to look at the Accept header in the HTTP request to determine what format to return
-			type: "GET",
-		    url: "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
-		    contentType: "application/json; charset=utf-8",
-		    data: "nick=" + "marce_fing",
-		    dataType: 'jsonp',
-		    cache: false,
-		    crossDomain:true,
-		    headers: {
 			"Access-Control-Allow-Origin": "*",
-			
 			"cache-control": "no-cache",
-				},
-		    success: function(response) {
-		        alert(response);
-		        return response;        
-		      },
-		    error: function(jqXHR, textStatus, errorThrown) {
-		        alert('ajax error'+ jqXHR + ", " + errorThrown);
-		      }
-		      
-		      $.ajax({
-		            crossDomain: true,
-		            type:"GET",
-		            contentType: "application/json; charset=utf-8",
-		            async:false,
-		            url: "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
-		            data: { symbol: 'ctsh' },
-		            dataType: "jsonp",                
-		            jsonpCallback: 'fnsuccesscallback',
-		            	headers: {
-		        			"Access-Control-Allow-Origin": "*",
-		        			"Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
-		        			
-		        			"cache-control": "no-cache",
-		        				}
+		}
+	}
+					
+		/*
+		      $.ajaxPrefilter( function (options) {
+		    	  if (options.crossDomain && jQuery.support.cors) {
+		    	    var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		    	    options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		    	    //options.url = "http://cors.corsproxy.io/url=" + options.url;
+		    	  }
+		    	});
 
-		}).done(function (response) {*/
+		    	$.get(
+		    	    'http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing',
+		    	    function (response) {
+		    	        
+		//}).done(function (response) { */
 
 	$.ajax(settings).done(function (response) {
-
 		var msjs= response.mensajes;
-
+		if (msjs.length > 0){
 		$.each(msjs, function (index, item) {
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
@@ -95,10 +58,14 @@ function cargarMensajes(){
                 + "</tr>";
     		$('#tbodynuevos').append(eachrow);
     		
-    		var url = "Mensaje.jsp?source=" + item.id;
-    		$("#"+item.id).attr("href",url);
+   			var url = "Mensaje.jsp?source=" + item.id;
+   			$("#"+item.id).attr("href",url);
 		});
-		
+		} else{
+			var eachrow = "<tr> <td> </td> <td> No hay mensajes nuevos </td> <td> </td> </tr>";
+			$('#tbodynuevos').append(eachrow);
+			}
+
 	});	
 
 
@@ -106,19 +73,19 @@ function cargarMensajes(){
 	var settings2 = {
 		"async": true,
 		"crossDomain": true,
-		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesviejos?nick=marce_fing",
-		"url": "http://localhost:8080/Servidor/vermensajesviejos?nick=marce_fing",
+		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesviejos?nick=marce_fing",
+	  //"url": "http://localhost:8080/Servidor/vermensajesviejos?nick=marce_fing",
 		"method": "GET",
 		"headers": {
-		"Access-Control-Allow-Origin": "*",	
-		"cache-control": "no-cache",
-		 },
-		"data": "{\r\n    \"tutorials\": {\r\n        \"id\": \"Crunchify\",\r\n        \"topic\": \"REST Service\",\r\n        \"description\": \"This is REST Service Example by Crunchify.\"\r\n    }\r\n}"
+			"Access-Control-Allow-Origin": "*",
+			"cache-control": "no-cache",
 		}
+	}
 
-	$.ajax(settings2).done(function (response) {
+	$.ajax(settings2).done(function (response) {		
 		var msjs2= response.mensajes;
 		
+		if (msjs2.length > 0){
 		$.each(msjs2, function (index, item) {
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
@@ -136,6 +103,10 @@ function cargarMensajes(){
     		$("#"+item.id).attr("href",url);
     		
 		});
+		} else{
+			var eachrow = "<tr> <td> </td> <td> No hay mensajes viejos </td> <td> </td> </tr>";
+			$('#tbodyviejos').append(eachrow);
+		}
 	});	
 }
 
@@ -161,11 +132,11 @@ function cargarMensajes(){
 
 
 						<table id="tabla" class="table table-hover">
-							<thead>
+							<thead id="theadnuevos">
 								<tr>
 									<th></th>
-									<th>Asunto</th>
-									<th>Fecha</th>
+									<th style="text-align: center;">Asunto</th>
+									<th style="text-align: center;">Fecha</th>
 								</tr>
 							</thead>
 							<tbody id="tbodynuevos">
@@ -177,11 +148,11 @@ function cargarMensajes(){
 					</div>
 					<div id="menu1" class="tab-pane fade">
 						<table class="table table-hover">
-							<thead>
+							<thead id="theadviejos">
 								<tr>
 									<th></th>
-									<th>Asunto</th>
-									<th>Fecha</th>
+									<th style="text-align: center;">Asunto</th>
+									<th style="text-align: center;">Fecha</th>
 								</tr>
 							</thead>
 							<tbody id="tbodyviejos">

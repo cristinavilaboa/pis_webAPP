@@ -144,3 +144,31 @@ ul, ol {
     overflow-x: hidden;
 }
 
+
+.enlaceboton {    font-family: "Roboto", sans-serif; 
+    text-transform: uppercase;
+  outline: 0;
+  background: #40339e;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+ } 
+ .enlaceboton:link, 
+ .enlaceboton:visited { 
+    border-top: 1px solid #cccccc; 
+    border-bottom: 2px solid #666666; 
+    border-left: 1px solid #cccccc; 
+    border-right: 2px solid #666666; 
+ } 
+ .enlaceboton:hover { 
+ background: #322860;
+     border-bottom: 1px solid #cccccc; 
+    border-top: 2px solid #666666; 
+    border-right: 1px solid #cccccc; 
+    border-left: 2px solid #666666; 
+ }
