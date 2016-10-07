@@ -84,6 +84,7 @@ function cargarMensaje(){
 				<p id=remitente style="text-align: left">  </p>
 				<hr>
 				<p id=contenido style="text-align: left"> </p>
+				<hr>
 				<br>
     			<div>
     				<a id="responder" href=# class="enlaceboton">Responder </a>
