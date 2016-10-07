@@ -26,9 +26,11 @@ function cargarMundos(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "http://localhost:8080/Servidor/listarmundosprofesor",
+			  "url":"http://localhost:8080/Servidor/listarmundosprofesor",
+			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarmundosprofesor",
 			  "method": "GET",
 			  "headers": {
+				"Access-Control-Allow-Origin": "*",
 				"content-type": "application/json",
 			    "cache-control": "no-cache"
 			  }
@@ -49,25 +51,31 @@ function cargarMundos(){
 /****FUNCION PARA TRAER LOS NIVELES DEL MUNDO SELECCIONADO DESDE EL SERVIDOR****/
 
 function cargarNiveles(){
-		var id_mundo = $('#lista').val();	
+		var id_mundo = $('#lista').val();
+		//alert(id_mundo);
 
 		var settings = {
 			  "async": true,
 			  "crossDomain": true,
 			  "url": "http://localhost:8080/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
+			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
 			  "method": "GET",
 			  "headers": {
 			    "cache-control": "no-cache",
-			    "postman-token": "d3a4e224-807d-e314-5ba1-2291dbaa4ba0"
+			    "Access-Control-Allow-Origin": "*",
 			  }
 			}
 
 			$.ajax(settings).done(function (response) {
 				var niveles= response;
 				$('#lista2').empty();
+				var celldefault = $('<option>');
+				celldefault.val("");
+				celldefault.text("Seleccione el nivel");
+				$('#lista2').append(celldefault);
 				for(i = 0;i<niveles.lista.length ;i++){
 					var cell = $('<option>');
-					cell.val(niveles.lista[i].num_nivel);
+					cell.val(niveles.lista[i].id_nivel); //este es el que voy a usar para guardar el problema
 					cell.text(niveles.lista[i].num_nivel);
 					$('#lista2').append(cell);
 				}
@@ -97,34 +105,60 @@ function guardarPregunta(){
 			}
 
 		$.ajax(settings).done(function (response) {
-		  guardarProblema(response.data[0].path);
+		  	//alert("holaaaaaa")
+		 	var datos = JSON.parse(response);
+		  	//alert(datos.path);
+			guardarProblema(datos.path);
 		});
 }
 /****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR EL SERVIDOR****/
-function guardarProblema(){
+function guardarProblema(path){
+	//alert("entre al guardar");
 	var mundo = $('#lista').val();
-	var nivel = $ ('#lista2').val();
-	var resp = $ ('#respuesta').val();
-	var ayuda = $ ('#ayuda').val();
-	var puntos = $ ('#puntaje').val();
-	
-	//cuando termine
-	document.getElementById('myModal').style.display = "none";
+	var nivel = $('#lista2').val();
+	var resp = $('#respuesta').val();
+	var ayuda = $('#ayuda').val();
+	var puntos = $('#puntaje').val();
+	var desc = $('#descripcion').val();
+	alert(nivel);//+" "+nivel+" "+resp+" "+ayuda+" "+puntos+" "+desc+" "path);
+	var settings = {
+			  "async": true,
+			  "crossDomain": true,
+			  "url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
+			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
+			  "method": "POST",
+			  "headers": {
+			    "cache-control": "no-cache",
+			    "Access-Control-Allow-Origin": "*",
+			  }
+			}
+
+			$.ajax(settings).done(function (response) {
+			  alert("agregobien");
+			  $('#myModal').hide();
+			});
+
+}
+
+function habilitarCrear(){
+	$('#myBtn').attr('disabled', false);
 }
 
 </script>
 </head>
 <body onload="cargarMundos()">	
 <div class="form" style="height:300px">
+		<p><b>Seleccione el mundo y nivel para el problema</b></p>
+		<br>
  		<select id ="lista" class="form-control" onchange="cargarNiveles()">
  		<option value ="">Seleccione el mundo</option>
 		</select>
 	<br><br>
-		<select id ="lista2" class="form-control">
+		<select id ="lista2" class="form-control" onchange="habilitarCrear()" size="1">
 		<option value = "">Seleccione el nivel</option>
 		</select> 	
  	<br><br><br><br>
-	<button id="myBtn">Crear Pregunta</button>
+	<button id="myBtn" disabled="disabled">Crear Problema</button>
 </div>
 
 <!-- PopUp -->
@@ -135,39 +169,44 @@ function guardarProblema(){
     <span class="close">x</span>
     <section>
     <header>
-    <h2>Complete la información para crear la nueva pregunta</h2>
+    <h2>Complete la información para crear el nuevo problema</h2>
     </header>
+    	<!--  <form action="NuevaPregunta.jsp" method="post" onsubmit="return guardarPregunta();">-->
     	<table width="100%" border="0" cellpadding="5">
     	<tr>
     	<td>
 	    <div style="width: 100%;">
-    		<label class="control-label">Seleccione el archivo</label>
-			<input id="input-1" type="file" class="file" width="50px">
+    		<label class="control-label">Seleccione el archivo del problema</label>
+			<input id="input-1" type="file" class="file" width="50px" required="required">
     	</div>
 		</td>
 		<td>
 		<div>
+    	<label>Descripcion del problema</label>
+    	<textarea id ="descripcion" rows="5" required="required"></textarea>
+    	<br><br>
+    	<label>Puntaje</label>
+    	<input id ="puntaje" required="required"></input>
+    	</div>
+    	</td>
+		<td>
+		<div>
     	<label>Respuesta</label>
-    	<textarea id="respuesta" rows="10" cols="5"></textarea>
+    	<textarea id="respuesta" rows="10" cols="5" required="required"></textarea>
     	</div>
     	</td>
     	<td>
 		<div>
     	<label>Ayuda</label>
-    	<textarea id ="ayuda" rows="10" cols="5" ></textarea>
-    	</div>
-    	</td>
-    	<td>
-		<div>
-    	<label>Puntaje</label>
-    	<input id ="puntaje"></input>
+    	<textarea id ="ayuda" rows="10" cols="5" required="required"></textarea>
     	</div>
     	</td>
     	</tr>
     	</table>
     	<footer>
-		<button onclick="guardarPregunta()">Guardar Pregunta</button>
+    	<button class="estilonuestro" onclick="guardarPregunta()">Guardar Problema</button>
 		</footer>
+		<!-- </form> -->
 	</section>
   </div>
 

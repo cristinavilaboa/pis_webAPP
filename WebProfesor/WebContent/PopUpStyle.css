@@ -39,3 +39,21 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.estilonuestro {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #40339e;
+  width: 30%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+}
+
+.estilonuestro:hover,.estilonuestro:active,.estilonuestro:focus {
+  background: #322860;
+}
