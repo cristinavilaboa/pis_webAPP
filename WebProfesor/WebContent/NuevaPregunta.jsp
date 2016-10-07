@@ -26,8 +26,8 @@ function cargarMundos(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url":"http://localhost:8080/Servidor/listarmundosprofesor",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarmundosprofesor",
+			  //"url":"http://localhost:8080/Servidor/listarmundosprofesor",
+			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarmundosprofesor",
 			  "method": "GET",
 			  "headers": {
 				"Access-Control-Allow-Origin": "*",
@@ -57,8 +57,8 @@ function cargarNiveles(){
 		var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "http://localhost:8080/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
+			  //"url": "http://localhost:8080/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
+			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
 			  "method": "GET",
 			  "headers": {
 			    "cache-control": "no-cache",
@@ -111,7 +111,7 @@ function guardarPregunta(){
 			guardarProblema(datos.path);
 		});
 }
-/****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR EL SERVIDOR****/
+/****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR****/
 function guardarProblema(path){
 	//alert("entre al guardar");
 	var mundo = $('#lista').val();
@@ -120,12 +120,12 @@ function guardarProblema(path){
 	var ayuda = $('#ayuda').val();
 	var puntos = $('#puntaje').val();
 	var desc = $('#descripcion').val();
-	alert(nivel);//+" "+nivel+" "+resp+" "+ayuda+" "+puntos+" "+desc+" "path);
+	//alert(nivel);//+" "+nivel+" "+resp+" "+ayuda+" "+puntos+" "+desc+" "path);
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
+			  //"url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
+			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
 			  "method": "POST",
 			  "headers": {
 			    "cache-control": "no-cache",
@@ -134,7 +134,7 @@ function guardarProblema(path){
 			}
 
 			$.ajax(settings).done(function (response) {
-			  alert("agregobien");
+			  //alert("agregobien");
 			  $('#myModal').hide();
 			});
 
