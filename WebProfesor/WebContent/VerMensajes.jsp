@@ -18,22 +18,73 @@ function cargarMensajes(){
 
 //---------------cargar mensajes nuevos------------
 	var settings = {
-		"async": true,
+		"async": false,
 		"crossDomain": true,
-		"url": "http://localhost:8080/Servidor/vermensajesnuevos?nick=marce_fing",
+		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
+		//"url": "http://localhost:8080/Servidor/vermensajesnuevos?nick=marce_fing",
 		"method": "GET",
+		"dataType": 'jsonp',
 		"headers": {
+		"Access-Control-Allow-Origin": "*",
+		"Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+		
 		"cache-control": "no-cache",
-		"postman-token": "e541a5ec-37e8-68b0-6b26-ae3c285d031c"
-		 },
-		 "data": "{\r\n    \"tutorials\": {\r\n        \"id\": \"Crunchify\",\r\n        \"topic\": \"REST Service\",\r\n        \"description\": \"This is REST Service Example by Crunchify.\"\r\n    }\r\n}"
-		}
+			},
+		success: function(response) {
+			        alert(response);
+			        return response;        
+			      },
+		error: function() {
+			        alert('ajax error');
+			      }
+		} 
+		
+		/*
+		$.ajax({
+			accepts: {json: "application/json"}, //With WCF 4.0, you can add an attribute called automaticFormatSelectionEnabled which allows the service to look at the Accept header in the HTTP request to determine what format to return
+			type: "GET",
+		    url: "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
+		    contentType: "application/json; charset=utf-8",
+		    data: "nick=" + "marce_fing",
+		    dataType: 'jsonp',
+		    cache: false,
+		    crossDomain:true,
+		    headers: {
+			"Access-Control-Allow-Origin": "*",
+			
+			"cache-control": "no-cache",
+				},
+		    success: function(response) {
+		        alert(response);
+		        return response;        
+		      },
+		    error: function(jqXHR, textStatus, errorThrown) {
+		        alert('ajax error'+ jqXHR + ", " + errorThrown);
+		      }
+		      
+		      $.ajax({
+		            crossDomain: true,
+		            type:"GET",
+		            contentType: "application/json; charset=utf-8",
+		            async:false,
+		            url: "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
+		            data: { symbol: 'ctsh' },
+		            dataType: "jsonp",                
+		            jsonpCallback: 'fnsuccesscallback',
+		            	headers: {
+		        			"Access-Control-Allow-Origin": "*",
+		        			"Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+		        			
+		        			"cache-control": "no-cache",
+		        				}
+
+		}).done(function (response) {*/
 
 	$.ajax(settings).done(function (response) {
+
 		var msjs= response.mensajes;
-	
+
 		$.each(msjs, function (index, item) {
-			
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
 			
@@ -51,16 +102,16 @@ function cargarMensajes(){
 	});	
 
 
-
 //------------cargar mensajes viejos-------------------
 	var settings2 = {
 		"async": true,
 		"crossDomain": true,
+		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesviejos?nick=marce_fing",
 		"url": "http://localhost:8080/Servidor/vermensajesviejos?nick=marce_fing",
 		"method": "GET",
 		"headers": {
+		"Access-Control-Allow-Origin": "*",	
 		"cache-control": "no-cache",
-		"postman-token": "e541a5ec-37e8-68b0-6b26-ae3c285d031c"
 		 },
 		"data": "{\r\n    \"tutorials\": {\r\n        \"id\": \"Crunchify\",\r\n        \"topic\": \"REST Service\",\r\n        \"description\": \"This is REST Service Example by Crunchify.\"\r\n    }\r\n}"
 		}
@@ -68,11 +119,7 @@ function cargarMensajes(){
 	$.ajax(settings2).done(function (response) {
 		var msjs2= response.mensajes;
 		
-		//var date= JSON.parse(json,JSON.dateParser);
-		//alert(date);
-		
 		$.each(msjs2, function (index, item) {
-			
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
 			//alert(date);
@@ -83,27 +130,12 @@ function cargarMensajes(){
               + "<td>" + date.toDateString() + "</td>"
               + "</tr>" ;
               
-              /*var newUrl = document.getElementById(index).href;
-              newUrl = newUrl.replace("#", "Mensaje.jsp?source=" + item.id);
-              document.getElementById(index).href = newUrl;*/
-
-            
   			$('#tbodyviejos').append(eachrow);
   
   			var url = "Mensaje.jsp?source=" + item.id;
     		$("#"+item.id).attr("href",url);
     		
 		});
-		
-		/*$.each(msjs2, function (index, item) {
-				
-		});
-		
-		$('<td> <a>').each(function (index, value){
-			if (('href'!="#menu1")&&('href'!="#home")){
-				$(this).attr("href","Mensaje.jsp?source=" + index);
-			}
-			});*/
 	});	
 }
 
@@ -137,22 +169,8 @@ function cargarMensajes(){
 								</tr>
 							</thead>
 							<tbody id="tbodynuevos">
-								<!--<tr id= "fila">
-									<td id= "dato" ><a href="Mensaje.html">  </a></td>
-									<!--  <td>asunto1</td>
-									<td>fecha1</td> 
-								</tr>
-								<!--  <tr>
-									<td><a href="Mensaje.html"> msj2 </a></td>
-									<td>asunto2</td>
-									<td>fecha2</td>
-								</tr>
-								<tr>
-									<td><a href="Mensaje.html"> msj3 </a></td>
-									<td>asunto3</td>
-									<td>fecha3</td>
-								</tr>-->
-							  </tbody>
+								
+							</tbody>
 						</table>
 
   
@@ -167,16 +185,7 @@ function cargarMensajes(){
 								</tr>
 							</thead>
 							<tbody id="tbodyviejos">
-								<!--  <tr>
-									<td><a href="Mensaje.html"> msj1 </a></td>
-									<td>asunto1</td>
-									<td>fecha1</td>
-								</tr>
-								<tr>
-									<td><a href="Mensaje.html"> msj2 </a></td>
-									<td>asunto2</td>
-									<td>fecha2</td>
-								</tr>-->
+								
 							</tbody>
 						</table>
 					</div>

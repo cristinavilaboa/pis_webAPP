@@ -33,12 +33,22 @@ function cargarMensaje(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "http://localhost:8080/Servidor/vermensaje?nick=marce_fing&id_mensaje=" + param,
+			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensaje?id_mensaje=" + param,
+			  //"url": "http://localhost:8080/Servidor/vermensaje?nick=marce_fing&id_mensaje=" + param,
 			  "method": "GET",
+			  "dataType": 'jsonp',
 			  "headers": {
-			    "cache-control": "no-cache",
-			    "postman-token": "7d14f206-b080-cbba-0e72-c9cf186cf2ab"
-			  }
+				  "Access-Control-Allow-Origin": "*",
+				  "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+				  "cache-control": "no-cache",
+			  },
+				success: function(response) {
+        		alert(response);
+        			return response;        
+     			 },
+    			error: function() {
+        			alert('ajax error');
+      }
 			}
 
 			$.ajax(settings).done(function (response) {
@@ -46,17 +56,23 @@ function cargarMensaje(){
 			 	$("#asunto").text("Asunto: " + mensaje.asunto);
 			 	$("#remitente").text("Remitente: " + mensaje.remitente);
 			 	$("#contenido").text(mensaje.contenido);
+			 	
+			 	var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
+	    		$("#responder").attr("href",url);
+			 	
+
 			});
 	
 	//------------marcar mensaje como leido--------------
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "http://localhost:8080/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
+			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
+			  //"url": "http://localhost:8080/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
 			  "method": "POST",
 			  "headers": {
+				"Access-Control-Allow-Origin": "*",
 			    "cache-control": "no-cache",
-			    "postman-token": "fbf8407c-9d93-61d9-2c1b-7e6d1d025c03"
 			  }
 			}
 
@@ -77,9 +93,9 @@ function cargarMensaje(){
 				<hr>
 				<p id=contenido style="text-align: left"> </p>
 				<br>
-    			<form action="ResponderMensaje.html">
-    				<button style="width: 4cm;"> Responder </button>
-    			</form>
+    			<div>
+    				<a id="responder" href=#>Responder </a>
+    			</div>
 			</div>
 		</div>
 	</div>	
