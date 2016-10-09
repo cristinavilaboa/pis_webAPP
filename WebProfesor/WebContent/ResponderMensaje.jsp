@@ -33,8 +33,11 @@ function cargarMensaje(){
 	var remitente = getParameters("remitente");
 	var asunto = getParameters("asunto");
 	
-	$('#destino').text(remitente);
-	$('#asunto').text("Re: " + asunto);
+	var as = asunto.replace(/%20/g, " ");
+	var re = remitente.replace(/%20/g, " ");
+	
+	$('#destino').text(re);
+	$('#asunto').text("Re: " + as);
 	
 }
 

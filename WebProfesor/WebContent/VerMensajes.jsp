@@ -119,6 +119,9 @@ function cargarMensajes(){
 	  <div class="login-page" style="width: 720px"> 
 		<div>
 			<div id="div1" class="form">
+			<form action="Menu.html">
+			<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
+			</form>
 				 <h2 style="font-family: serif;">Mensajes</h2> 
 				<ul class="nav nav-tabs">
 					<li class="active"><a data-toggle="tab" href="#home">Mensajes

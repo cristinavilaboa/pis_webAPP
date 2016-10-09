@@ -147,7 +147,11 @@ function habilitarCrear(){
 </script>
 </head>
 <body onload="cargarMundos()">	
+<div class="login-page" style="width: 720px">
 <div class="form" style="height:300px">
+		<form action="Menu.html">
+			<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
+			</form>
 		<p><b>Seleccione el mundo y nivel para el problema</b></p>
 		<br>
  		<select id ="lista" class="form-control" onchange="cargarNiveles()">
@@ -209,7 +213,7 @@ function habilitarCrear(){
 		<!-- </form> -->
 	</section>
   </div>
-
+</div>
 </div>
 
 <script type="text/javascript">
