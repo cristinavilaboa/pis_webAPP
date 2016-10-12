@@ -52,10 +52,10 @@ function guardarMensaje(){
   		"async": true,
   		"crossDomain": true,
 		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing",
-		//"url": "http://localhost:8080/Servidor/respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido +"&id_profesor=marce_fing",
+		
 		"method": "POST",
   		"headers": {
-  			//"Access-Control-Allow-Origin": "*",
+  			"Access-Control-Allow-Origin": "*",
     		"cache-control": "no-cache",
   		}
 	}

@@ -101,14 +101,17 @@ function guardarPregunta(){
 			  "processData": false,
 			  "contentType": false,
 			  "mimeType": "multipart/form-data",
-			  "data": formData
+			  "data": file
 			}
 
 		$.ajax(settings).done(function (response) {
 		  	//alert("holaaaaaa")
 		 	var datos = JSON.parse(response);
 		  	//alert(datos.path);
-			guardarProblema(datos.path);
+			var path2 = datos.path;
+			var p = path2.replace("/","");
+		  	guardarProblema(p);
+		  	//guardarProblema(datos.path);
 		});
 }
 /****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR****/
