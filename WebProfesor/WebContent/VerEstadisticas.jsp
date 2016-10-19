@@ -34,7 +34,6 @@ function cargarEstadisticas(){
 		var estadisticas= response.lista;
 		$.each(estadisticas, function (index, item) {
 			
-			indice=index+1;
     		var eachrow = "<tr>"
                 + "<td> " + item.id_problema + "-"
                 + item.nro_nivel + "-"
@@ -47,6 +46,36 @@ function cargarEstadisticas(){
 		});
 
 	});	
+	
+	//------------cargar datos de ranking-------------------
+	var settings = {
+	  		"async": true,
+	  		"crossDomain": true,
+	  		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/verranking",
+			  //"url": "http://localhost:8080/Servidor/verranking",
+	  		"method": "GET",
+	  		"headers": {
+	  			"Access-Control-Allow-Origin": "*",
+	    		"cache-control": "no-cache",
+	  			}
+			}
+			
+	$.ajax(settings).done(function (response) {
+		var estadisticas= response.lista;
+		$.each(estadisticas, function (index, item) {
+			
+    		var eachrow = "<tr>"
+                + "<td> " + item.nick + " </td>"
+                + "<td> " + item.puntos+ " </td>"
+                + "</tr>";
+    		$('#tbody').append(eachrow);
+    		
+		});
+
+	});		
+	
+	
+
 }
 
 
@@ -61,8 +90,17 @@ function cargarEstadisticas(){
 			<form action="Menu.html">
 			<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
 			</form>
-				<h4  style="text-align: center"> Estadisticas  </h4>
-				<table class="table table-hover">
+			<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#home">Estadisticas</a></li>
+					<li><a data-toggle="tab" href="#menu1">Ranking</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+
+
+
+						<table class="table table-hover">
 					<thead id="thead">
 						<tr>
 							<th style="text-align: left;">Pregunta-Nivel-Mundo</th>
@@ -76,6 +114,25 @@ function cargarEstadisticas(){
 								
 					</tbody>
 				</table>
+
+  
+					</div>
+					<div id="menu1" class="tab-pane fade">
+						<table class="table table-hover">
+							<thead id="theadviejos">
+								<tr>
+									<th style="text-align: center;">Jugador</th>
+									<th style="text-align: center;">Puntos</th>
+								</tr>
+							</thead>
+							<tbody id="tbodyviejos">
+								
+							</tbody>
+						</table>
+					</div>
+				</div> 
+		
+				
 			</div>  
 		</div>  
 	   </div>
