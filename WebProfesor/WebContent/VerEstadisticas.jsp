@@ -35,13 +35,17 @@ function cargarEstadisticas(){
 		$.each(estadisticas, function (index, item) {
 			
     		var eachrow = "<tr>"
-                + "<td> " + item.id_problema + "-"
-                + item.nro_nivel + "-"
-                + item.id_mundo + " </td>"
+                + "<td> " + item.id_problema + "</td>"
+                + "<td> " + item.nro_nivel + "</td>"
+                + "<td> " + item.nombre_mundo + " </td>"
+                +"<td> <a id=" + item.id_problema + " href=#>" + "link" + "</a>" + "</td>"
                 + "<td> " + item.cant_intentos + " </td>"
                 + "<td> " + item.cant_aciertos + " </td>"
                 + "</tr>";
-    		$('#tbody').append(eachrow);
+    		$('#tbodyestadisticas').append(eachrow);
+    		//https://www.dropbox.com/home/Preguntas/derivadaxcuadradosobredos.png
+    		var url = "https://www.dropbox.com/home/" + item.url_problema;
+    		$("#"+item.id_problema).attr("href",url);
     		
 		});
 
@@ -61,19 +65,17 @@ function cargarEstadisticas(){
 			}
 			
 	$.ajax(settings).done(function (response) {
-		var estadisticas= response.lista;
+		var estadisticas= response.listaPuntos;
 		$.each(estadisticas, function (index, item) {
 			
     		var eachrow = "<tr>"
                 + "<td> " + item.nick + " </td>"
                 + "<td> " + item.puntos+ " </td>"
                 + "</tr>";
-    		$('#tbody').append(eachrow);
+    		$('#tbodyranking').append(eachrow);
     		
 		});
-
 	});		
-	
 	
 
 }
@@ -84,48 +86,46 @@ function cargarEstadisticas(){
 
 </head>
 <body onload="cargarEstadisticas()">
-	  <div class="login-page" style="width: 720px"> 
-		<div>
-			<div id="div1" class="form" >
-			<form action="Menu.html">
-			<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
-			</form>
-			<ul class="nav nav-tabs">
+	<div class="login-page" style="width: 720px"> 
+		<div >
+			<div id="div1" class="form">
+				<form action="Menu.html">
+					<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
+				</form>
+				<ul class="nav nav-tabs">
 					<li class="active"><a data-toggle="tab" href="#home">Estadisticas</a></li>
 					<li><a data-toggle="tab" href="#menu1">Ranking</a></li>
 				</ul>
 
-				<div class="tab-content">
-					<div id="home" class="tab-pane fade in active">
-
-
+				<div class="tab-content" >
+					<div id="home" class="tab-pane fade in active" >
 
 						<table class="table table-hover">
-					<thead id="thead">
-						<tr>
-							<th style="text-align: left;">Pregunta-Nivel-Mundo</th>
-							<!--  <th style="text-align: left;">Nivel</th>
-							<th style="text-align: left;">Mundo</th> -->
-							<th style="text-align: left;">Cantidad de Intentos</th>
-							<th style="text-align: left;">Cantidad de Aciertos</th>
-						</tr>
-					</thead>
-					<tbody id="tbody">
+							<thead id="thead">
+								<tr>					
+									<th style="text-align: left;">ID Problema</th>
+									<th style="text-align: left;">Nivel</th>
+									<th style="text-align: left;">Mundo</th>
+									<th style="text-align: left;">  </th>
+									<th style="text-align: left;">Cantidad de Intentos</th>
+									<th style="text-align: left;">Cantidad de Aciertos</th>
+								</tr>
+							</thead>
+							<tbody id="tbodyestadisticas">
 								
-					</tbody>
-				</table>
+							</tbody>
+						</table>
 
-  
 					</div>
 					<div id="menu1" class="tab-pane fade">
 						<table class="table table-hover">
 							<thead id="theadviejos">
 								<tr>
-									<th style="text-align: center;">Jugador</th>
-									<th style="text-align: center;">Puntos</th>
+									<th style="text-align: left;">Jugador</th>
+									<th style="text-align: left;">Puntos</th>
 								</tr>
 							</thead>
-							<tbody id="tbodyviejos">
+							<tbody id="tbodyranking">
 								
 							</tbody>
 						</table>
