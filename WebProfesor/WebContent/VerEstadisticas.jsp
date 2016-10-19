@@ -86,9 +86,9 @@ function cargarEstadisticas(){
 
 </head>
 <body onload="cargarEstadisticas()">
-	<div class="login-page" style="width: 720px"> 
-		<div >
-			<div id="div1" class="form">
+	<div class="login-page" style="width: 720px;"> 
+		<div>
+			<div id="div1" class="form" style="width: 500px; max-width: 720px;">
 				<form action="Menu.html">
 					<button style="width:25%; padding: 5px; text-align: center; margin-top: 1px; margin-right: 2px; position:absolute; top:0; right:0; font-size:12px; text-transform:none;" >Menú Principal</button>
 				</form>
@@ -97,8 +97,8 @@ function cargarEstadisticas(){
 					<li><a data-toggle="tab" href="#menu1">Ranking</a></li>
 				</ul>
 
-				<div class="tab-content" >
-					<div id="home" class="tab-pane fade in active" >
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
 
 						<table class="table table-hover">
 							<thead id="thead">
