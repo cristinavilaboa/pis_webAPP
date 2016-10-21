@@ -7,7 +7,7 @@ div#container
 }
 body
 {
-   background-color: #FFFFFF;
+   background-color: #928695;
    color: #000000;
    font-family: Arial;
    font-weight: normal;
@@ -36,7 +36,7 @@ a:hover
 }
 #Layer1
 {
-   background-color: #0C2635;
+   background-color: #F9E79F;
    background-image: none;
 }
 #Shape4
@@ -98,12 +98,12 @@ a:hover
 }
 #Layer3
 {
-   background-color: #023D58;
+   background-color: #F9E79F;
    background-image: none;
 }
 #Layer4
 {
-   background-color: #0C2635;
+   background-color: #F7DC6F;
    background-image: none;
 }
 #wb_Text11 
@@ -274,7 +274,7 @@ a:hover
 {
    width: 781px;
    height: 548px;
-   background-color: #03354E;
+   background-color: #5D6D7E;
    background-image: none;
    border: 0px #000000 solid;
 }
