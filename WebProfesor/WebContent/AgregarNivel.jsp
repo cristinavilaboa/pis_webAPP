@@ -7,20 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <meta name="generator" content="WYSIWYG Web Builder 11 Trial Version - http://www.wysiwygwebbuilder.com">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="index.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="PopUpStyle.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="loginStyle.css" media="screen" />
 <title>Agregar Nivel</title>
 </head>
 <script type="text/javascript">
-/*$(document).ready(function() {
-
-	  $("#lista").change(function() {
-	    var el = $(this) ;
-	    $("#lista2").append("<option>SHIPPED</option>");
-	  });
-
-});*/
 
 /****FUNCION PARA TRAER LOS MUNDOS DESDE EL SERVIDOR****/
 function cargarMundos(){
@@ -78,12 +71,14 @@ function habilitarCrear(){
 
 </script>
 <body onload="cargarMundos()">
-		<div id="Layer1" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:97px;z-index:3;">
+
+	<!-- ************************** HEADER ***************************************-->
+	<div id="Layer1" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:97px;z-index:3;">
 		<div id="Layer1_Container" style="width:800px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
 			<div id="wb_Text6" style="position:absolute;left:319px;top:10px;width:472px;height:61px;z-index:0;text-align:left;">
-				<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:48px;"><strong> Profesor</strong></span>
+				<!-- <span style="color:#000000;font-family:'Trebuchet MS';font-size:48px;"><strong> Profesor</strong></span> -->
 			</div>
-			<div id="wb_Image1" style="position:absolute;left:1px;top:2px;width:173px;height:94px;z-index:1;">
+			<div id="wb_Image1" style="position:absolute;left:35%;top:2px;width:173px;height:94px;z-index:1;">
 				<img src="Imagenes/Logo.png" id="Image1" alt="">
 			</div>
 		</div>
@@ -93,7 +88,16 @@ function habilitarCrear(){
 			<div id="Shape4">
 			</div>
 		</div>
-		
+		<div id="wb_Text3" style="position:absolute;left:22px;top:149px;width:215px;height:29px;z-index:5;text-align:left;">
+			<div style="position:absolute;left:0px;top:0px;width:215px;height:29px;"><span style="color:#03354E;font-family:'Trebuchet MS';font-size:24px;">Agregar Nivel</span>
+			</div>
+		</div>
+		<div id="wb_Shape3" style="position:absolute;left:10px;top:179px;width:782px;height:3px;z-index:6;">
+			<div id="Shape3"></div>
+		</div>
+
+		<div id="wb_Text10" style="position:absolute;left:25px;top:562px;width:205px;height:180px;z-index:8;text-align:left;">
+		</div>
 		<div id="wb_CssMenu1" style="position:absolute;left:145px;top:97px;width:504px;height:28px;z-index:9;">
 			<ul>
 				<li class="firstmain"><a class="active" href="./index.html" target="_self" title="Home">Home</a>
@@ -115,45 +119,34 @@ function habilitarCrear(){
 				</li>
 			</ul>
 		</div>
-		<div id="wb_Text3" style="position:absolute;left:22px;top:149px;width:215px;height:29px;z-index:5;text-align:left;">
-			<div style="position:absolute;left:0px;top:0px;width:215px;height:29px;"><span style="color:#03354E;font-family:'Trebuchet MS';font-size:24px;">Agregar Nivel</span>
-			</div>
+	<!-- ************************** FIN HEADER ***************************************-->
+	<div id="wb_Shape5" style="position:absolute;left:10px;top:204px;width:781px;height:548px;z-index:10;">
+		<div id="Shape5">
 		</div>
-		<div id="wb_Shape3" style="position:absolute;left:10px;top:179px;width:782px;height:3px;z-index:6;">
-			<div id="Shape3"></div>
-		</div>
-
-		<div id="wb_Text10" style="position:absolute;left:25px;top:562px;width:205px;height:180px;z-index:8;text-align:left;">
-	
-		</div>
-		<!-- wb_Shape5 es el contenedor donde van las cosas -->
-		<div id="wb_Shape5" style="position:absolute;left:10px;top:204px;width:781px;height:548px;z-index:10;">
-			<div id="Shape5">
-			</div>
-		</div>
-		<div id="wb_Text1" style="position:absolute;left:48px;top:240px;width:705px;height:42px;z-index:11;text-align:left;">
-			
+	</div>
+	<div id="wb_Text1" style="position:absolute;left:80px;top:256px;width:705px;height:42px;z-index:11;text-align:left;">
+		<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:20px;"><strong>Seleccione el mundo en el que desea agregar un nuevo nivel</strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><br></span>
+		<br><br><br>	
 			<!-- Lo que ya teniaaa empieza aca -->
-			<p><b>Seleccione el mundo en el que desea agregar un nuevo nivel</b></p>
-		<br>
- 		<select id ="lista" class="form-control" onchange="habilitarCrear()">
+		<select id ="lista" class="form-control" onchange="habilitarCrear()">
  		<option value ="">Seleccione el mundo</option>
 		</select>
-		<br><br>
-		<button id="myBtn" disabled="disabled" onclick="AgregarNivel()">Agregar Nivel</button>
-				<!-- Lo que ya teniaaa termina aca -->
-		</div>
-
+		<br><br><br>
+		<button class="estilonuestro" id="myBtn" disabled="disabled" onclick="AgregarNivel()">Agregar Nivel</button>
+		<!-- Lo que ya teniaaa termina aca -->
 	</div>
+	</div>
+	
+<!-- ********************************************FOOTER *****************************************-->
 	<div id="Layer3" style="position:absolute;text-align:center;left:0px;top:772px;width:100%;height:26px;z-index:13;">
 		<div id="Layer3_Container" style="width:800px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
 		</div>
 	</div>
 	<div id="Layer4" style="position:absolute;text-align:center;left:0px;top:798px;width:100%;height:100px;z-index:14;">
 		<div id="Layer4_Container" style="width:800px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
-
 		</div>
 	</div>
+<!-- ********************************************FIN FOOTER *****************************************-->
 <script src="bootstrap/js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>

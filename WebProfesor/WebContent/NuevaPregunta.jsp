@@ -215,7 +215,7 @@ function habilitarCrear(){
 		<option value = "">Seleccione el nivel</option>
 		</select> 	
  		<br><br><br><br>
-		<button id="myBtn" disabled="disabled">Crear Problema</button>
+		<button class="estilonuestro" id="myBtn" disabled="disabled">Crear Problema</button>
 	</div>		
 	</div>
 		<!-- ********************************************FOOTER *****************************************-->
@@ -252,7 +252,7 @@ function habilitarCrear(){
 		</td>
 		<td>
 		<div>
-    	<label>Descripcion del problema</label>
+    	<label>Descripción del problema</label>
     	<textarea id ="descripcion" rows="5" required="required"></textarea>
     	<br><br>
     	<label>Puntaje</label>

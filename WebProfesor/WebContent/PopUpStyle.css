@@ -15,7 +15,7 @@
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #F9E79F;
     margin: 20px auto;
     text-align:center;
     padding: 10px;
@@ -23,6 +23,7 @@
     height:80%;
     border: 1px solid #888;
     position: relative;
+    font-family: 'Trebuchet MS';
 }
 
 /* The Close Button */
@@ -44,7 +45,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #40339e;
+  background: #928695;
   width: 30%;
   border: 0;
   padding: 15px;
@@ -55,5 +56,5 @@
 }
 
 .estilonuestro:hover,.estilonuestro:active,.estilonuestro:focus {
-  background: #322860;
+  background: #4A235A;
 }
