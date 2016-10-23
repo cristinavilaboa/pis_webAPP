@@ -63,8 +63,8 @@ function cargarMensaje(){
 	var settings = {
 		"async": true,
 		"crossDomain": true,
-		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje=" + param,
-	  //"url": "http://localhost:8080/Servidor/mensajeleido?nick_prof=marce_fing&id_mensaje" + param,
+		"url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick=marce_fing&id_mensaje=" + param,
+	  //"url": "http://localhost:8080/Servidor/mensajeleido?nick=marce_fing&id_mensaje" + param,
 		"method": "POST",
 		"headers": {
 			"Access-Control-Allow-Origin": "*",
