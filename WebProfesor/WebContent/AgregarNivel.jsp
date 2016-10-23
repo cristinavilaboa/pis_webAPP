@@ -100,11 +100,11 @@ function habilitarCrear(){
 		</div>
 		<div id="wb_CssMenu1" style="position:absolute;left:145px;top:97px;width:504px;height:28px;z-index:9;">
 			<ul>
-				<li class="firstmain"><a class="active" href="./index.html" target="_self" title="Home">Home</a>
+				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
 				</li>
 				<li><a href="./VerMensajes.jsp" target="_self" title="Mensajes">Mensajes</a>
 				</li>
-				<li><a class="withsubmenu" href="#" target="_self" title="Services">Nuevo</a>
+				<li><a class="active" class="withsubmenu" href="#" target="_self" title="Services">Nuevo</a>
 
 					<ul>
 						<li class="firstitem"><a href="./NuevaPregunta.jsp" target="_self" title="Problema">Problema</a>
