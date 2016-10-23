@@ -87,6 +87,7 @@ function cargarMensajes(){
 
 	$.ajax(settings2).done(function (response) {		
 		var msjs2= response.mensajes;
+		alert("hola");
 		
 		if (msjs2.length > 0){
 		$.each(msjs2, function (index, item) {
@@ -157,7 +158,7 @@ function cargarMensajes(){
 			</ul>
 		</div>
 		<div id="wb_Text3" style="position:absolute;left:22px;top:149px;width:215px;height:29px;z-index:5;text-align:left;">
-			<div style="position:absolute;left:0px;top:0px;width:215px;height:29px;"><span style="color:#03354E;font-family:'Trebuchet MS';font-size:24px;">Estadisticas</span>
+			<div style="position:absolute;left:0px;top:0px;width:215px;height:29px;"><span style="color:#03354E;font-family:'Trebuchet MS';font-size:24px;">Mensajes</span>
 			</div>
 		</div>
 		<div id="wb_Shape3" style="position:absolute;left:10px;top:179px;width:782px;height:3px;z-index:6;">
@@ -175,8 +176,8 @@ function cargarMensajes(){
 		<div id="wb_Text1" style="position:absolute;left:48px;top:240px;width:705px;height:42px;z-index:11;text-align:left;">
 			
 			<!-- Lo que ya teniaaa empieza aca -->
-			<ul class="nav nav-tabs">
-					<li class="active"><a data-toggle="tab" href="#home">Mensajes
+				<ul class="nav nav-tabs">
+					<li class="active" ><a data-toggle="tab" href="#home">Mensajes
 							Nuevos</a></li>
 					<li><a data-toggle="tab" href="#menu1">Mensajes</a></li>
 				</ul>
@@ -186,15 +187,15 @@ function cargarMensajes(){
 
 
 
-						<table id="tabla" class="table table-hover">
-							<thead id="theadnuevos">
+						<table id="tabla" class="table table-hover" style="background-color: white;">
+							<thead id="theadnuevos" style="background-color: white;">
 								<tr>
 									<th></th>
-									<th style="text-align: center;">Asunto</th>
-									<th style="text-align: center;">Fecha</th>
+									<th style="text-align: center; font-family: Trebuchet MS;">Asunto</th>
+									<th style="text-align: center; font-family: Trebuchet MS;">Fecha</th>
 								</tr>
 							</thead>
-							<tbody id="tbodynuevos">
+							<tbody id="tbodynuevos" style="background-color: white;">
 								
 							</tbody>
 						</table>
@@ -202,15 +203,15 @@ function cargarMensajes(){
   
 					</div>
 					<div id="menu1" class="tab-pane fade">
-						<table class="table table-hover">
-							<thead id="theadviejos">
+						<table class="table table-hover" style="background-color: white;">
+							<thead id="theadviejos" style="background-color: white;">
 								<tr>
 									<th></th>
-									<th style="text-align: center;">Asunto</th>
-									<th style="text-align: center;">Fecha</th>
+									<th style="text-align: center; font-family: Trebuchet MS;">Asunto</th>
+									<th style="text-align: center; font-family: Trebuchet MS;">Fecha</th>
 								</tr>
 							</thead>
-							<tbody id="tbodyviejos">
+							<tbody id="tbodyviejos" style="background-color: white;">
 								
 							</tbody>
 						</table>

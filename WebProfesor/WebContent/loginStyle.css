@@ -14,7 +14,7 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form input {
-  font-family: "Roboto", sans-serif;
+  font-family: "Trebuchet MS";
   outline: 0;
   background: #f2f2f2;
   width: 100%;
@@ -25,7 +25,7 @@
   font-size: 14px;
 }
 .form button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Trebuchet MS";
   text-transform: uppercase;
   outline: 0;
   background: #928695;
@@ -93,7 +93,7 @@ body {
   background: -moz-linear-gradient(right, #9932CC, #8DC26F);
   background: -o-linear-gradient(right, #9932CC, #8DC26F);
   background: linear-gradient(to left, #9932CC, #8DC26F);*/
-  font-family: "Roboto", arial;
+  font-family: "Trebuchet MS";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
@@ -108,7 +108,7 @@ ul, ol {
 }
 
 .nav li a:hover {
-	background-color:#322860;
+	background-color:#4A235A;
 }
 
 .nav li ul {
@@ -131,10 +131,10 @@ ul, ol {
 }
 
 .nav-tabs a{
-	font-family: "Roboto", sans-serif;
+	font-family: "Trebuchet MS";
  	outline: 0;
 	color:white;
-	background: #40339e;
+	background: #928695;
 	cursor:auto;	
 }
 
@@ -145,10 +145,10 @@ ul, ol {
 }
 
 
-.enlaceboton {    font-family: "Roboto", sans-serif; 
+.enlaceboton {    font-family: "Trebuchet MS"; 
     text-transform: uppercase;
   outline: 0;
-  background: #40339e;
+  background: #928695;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -160,15 +160,15 @@ ul, ol {
  } 
  .enlaceboton:link, 
  .enlaceboton:visited { 
-    border-top: 1px solid #cccccc; 
+   /* border-top: 1px solid #cccccc; 
     border-bottom: 2px solid #666666; 
     border-left: 1px solid #cccccc; 
-    border-right: 2px solid #666666; 
+    border-right: 2px solid #666666; */
  } 
  .enlaceboton:hover { 
- background: #322860;
-     border-bottom: 1px solid #cccccc; 
+ background: #4A235A;
+   /*  border-bottom: 1px solid #cccccc; 
     border-top: 2px solid #666666; 
     border-right: 1px solid #cccccc; 
-    border-left: 2px solid #666666; 
+    border-left: 2px solid #666666; */
  }

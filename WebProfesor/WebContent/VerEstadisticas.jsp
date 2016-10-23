@@ -46,7 +46,7 @@ function cargarEstadisticas(){
                 + "<td> " + item.cant_aciertos + " </td>"
                 + "</tr>";
     		$('#tbodyestadisticas').append(eachrow);
-    		//https://www.dropbox.com/home/Preguntas/derivadaxcuadradosobredos.png
+    		
     		var url = "https://www.dropbox.com/home/" + item.url_problema;
     		$("#"+item.id_problema).attr("href",url);
     		
@@ -69,6 +69,7 @@ function cargarEstadisticas(){
 			
 	$.ajax(settings).done(function (response) {
 		var estadisticas= response.listaPuntos;
+		alert("entra");
 		$.each(estadisticas, function (index, item) {
 			
     		var eachrow = "<tr>"
@@ -167,32 +168,32 @@ function cargarEstadisticas(){
 				<div class="tab-content">
 					<div id="home" class="tab-pane fade in active">
 
-						<table class="table table-hover">
-							<thead id="thead">
+						<table class="table table-hover" style="background-color: white;">
+							<thead id="thead" style="background-color: white;">
 								<tr>					
-									<th style="text-align: left;">ID Problema</th>
-									<th style="text-align: left;">Nivel</th>
-									<th style="text-align: left;">Mundo</th>
-									<th style="text-align: left;">  </th>
-									<th style="text-align: left;">Cantidad de Intentos</th>
-									<th style="text-align: left;">Cantidad de Aciertos</th>
+									<th style="text-align: left; font-family: Trebuchet MS; ">ID Problema</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Nivel</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Mundo</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">  </th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Cantidad de Intentos</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Cantidad de Aciertos</th>
 								</tr>
 							</thead>
-							<tbody id="tbodyestadisticas">
+							<tbody id="tbodyestadisticas" style="background-color: white;">
 								
 							</tbody>
 						</table>
 
 					</div>
 					<div id="menu1" class="tab-pane fade">
-						<table class="table table-hover">
-							<thead id="theadviejos">
+						<table class="table table-hover" style="background-color: white;">
+							<thead id="theadviejos" style="background-color: white;">
 								<tr>
-									<th style="text-align: left;">Jugador</th>
-									<th style="text-align: left;">Puntos</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Jugador</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Puntos</th>
 								</tr>
 							</thead>
-							<tbody id="tbodyranking">
+							<tbody id="tbodyranking" style="background-color: white;">
 								
 							</tbody>
 						</table>
