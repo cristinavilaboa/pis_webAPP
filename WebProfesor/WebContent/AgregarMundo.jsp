@@ -70,6 +70,10 @@ function guardarMundo(path){
 			});
 }
 
+function Salir(){
+	window.location.href = "login.html"
+}
+
 </script>
 <body>
 	<!-- ************************** HEADER ***************************************-->
@@ -82,6 +86,7 @@ function guardarMundo(path){
 				<img src="Imagenes/Logo.png" id="Image1" alt="">
 			</div>
 		</div>
+		<button class="estilonuestro" style="position:absolute;left:90%;top:20px;z-index:1; width:90px;height:30px; padding:5px; font-family:'Trebuchet MS'; text-align:center; cursor: pointer;" onclick="Salir()">Salir</button>
 	</div>
 	<div id="container">
 		<div id="wb_Shape4" style="position:absolute;left:10px;top:88px;width:781px;height:46px;z-index:4;">

@@ -4,6 +4,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="PopUpStyle.css" media="screen" />
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -69,7 +70,7 @@ function cargarEstadisticas(){
 			
 	$.ajax(settings).done(function (response) {
 		var estadisticas= response.listaPuntos;
-		alert("entra");
+		//alert("entra");
 		$.each(estadisticas, function (index, item) {
 			
     		var eachrow = "<tr>"
@@ -84,7 +85,9 @@ function cargarEstadisticas(){
 
 }
 
-
+function Salir(){
+	window.location.href = "login.html"
+}
 
 </script>
 
@@ -100,6 +103,7 @@ function cargarEstadisticas(){
 				<img src="Imagenes/Logo.png" id="Image1" alt="">
 			</div>
 		</div>
+		<button class="estilonuestro" style="position:absolute;left:90%;top:20px;z-index:1; width:90px;height:30px; padding:5px; font-family:'Trebuchet MS'; text-align:center; cursor: pointer;" onclick="Salir()">Salir</button>
 	</div>
 	<div id="container">
 		<div id="wb_Shape4" style="position:absolute;left:10px;top:88px;width:781px;height:46px;z-index:4;">
