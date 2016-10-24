@@ -37,7 +37,7 @@ function load_table(item)
 
 function order_by_param() {
 	estadisticas.sort(function(a, b) { 
-	    return (porcentage(a)- porcentage(b));
+	    return (porcentage(b)-porcentage(a));
 	})
 	
 	$.each(estadisticas, function (index, item) {
