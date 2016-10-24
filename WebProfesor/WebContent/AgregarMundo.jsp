@@ -14,67 +14,8 @@
 <link rel="stylesheet" type="text/css" href="PopUpStyle.css" media="screen" />
 <title>Agregar Mundo</title>
 </head>
-<script type="text/javascript">
-
-/****FUNCION PARA GUARDAR LA IMAGEN DEL MUNDO EN DROPBOX****/
-function guardarImagen(){
-	var fileInput = document.getElementById('input-1');
-	var file = fileInput.files[0];
-	var nom = file.name;
-	var formData = new FormData();
-	formData.append("archivo", file);
-	var settings = {
-			  "async": true,
-			  "crossDomain": true,
-			  "url": "https://content.dropboxapi.com/1/files_put/auto/Mundos/"+nom,
-			  "method": "PUT",
-			  "headers": {
-			    "authorization": "Bearer 1tfe4ti31eAAAAAAAAAAG5czFEHm52Nz8-gUKW7Ji7lIbtDDUzka7FedQYY2eePG",
-			    "cache-control": "no-cache"
-			  },
-			  "processData": false,
-			  "contentType": false,
-			  "mimeType": "multipart/form-data",
-			  "data": file
-			}
-
-		$.ajax(settings).done(function (response) {
-		 	var datos = JSON.parse(response);
-			var path = datos.path;
-			var p = path.replace("/","");
-		  	guardarMundo(p);
-		});
-}
-
-/****FUNCION PARA GUARDAR EL MUNDO EN EL SERVIDOR****/
-function guardarMundo(path){
-	//alert("entre al guardar");
-	var nombre = $('#nombre').val();
-	var exp = $('#experiencia').val();
-	var desc = $('#descripcion').val();
-	var settings = {
-			  "async": true,
-			  "crossDomain": true,
-			  //"url": "http://localhost:8080/Servidor/agregarmundo?nombre=" + nombre + "&imagen=" + path + "&exp=" + exp + "&desc=" + desc,
-			  "url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarmundo?nombre=" + nombre + "&imagen=" + path + "&exp=" + exp + "&desc=" + desc,
-			  "method": "POST",
-			  "headers": {
-			    "cache-control": "no-cache",
-			    "Access-Control-Allow-Origin": "*",
-			  }
-			}
-
-			$.ajax(settings).done(function (response) {
-			  //alert("agregobien");
-			  location.href="Menu.html";
-			});
-}
-
-function Salir(){
-	window.location.href = "login.html"
-}
-
-</script>
+<script type="text/javascript" src="js/global_source.js"></script>
+<script type="text/javascript" src="js/agregarMundoScript.js"></script>
 <body>
 	<!-- ************************** HEADER ***************************************-->
 	<div id="Layer1" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:97px;z-index:3;">
