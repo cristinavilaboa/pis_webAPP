@@ -28,6 +28,8 @@ function guardarImagen(){
 			var path = datos.path;
 			var p = path.replace("/","");
 		  	guardarMundo(p);
+		  	alert("Mundo agregado");
+		  	location.href="index.html";
 		});
 }
 
@@ -52,7 +54,7 @@ function guardarMundo(path){
 
 			$.ajax(settings).done(function (response) {
 			  //alert("agregobien");
-			  location.href="Menu.html";
+			  location.href="index.html";
 			});
 }
 

@@ -46,7 +46,7 @@
 		</div>
 		<div id="wb_CssMenu1" style="position:absolute;left:145px;top:97px;width:504px;height:28px;z-index:9;">
 			<ul>
-				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Inicio</a>
 				</li>
 				<li><a href="./VerMensajes.jsp" target="_self" title="Mensajes">Mensajes</a>
 				</li>
@@ -61,7 +61,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="./VerEstadisticas.jsp" target="_self" title="Estadisticas">Estadisticas</a>
+				<li><a href="./VerEstadisticas.jsp" target="_self" title="Estadisticas">Estadísticas</a>
 				</li>
 			</ul>
 		</div>
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<div id="wb_Text1" style="position:absolute;left:80px;top:256px;width:705px;height:42px;z-index:11;text-align:left;">
-		<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:20px;"><strong>Complete la información para crear el nuevo Mundo</strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><br></span>
+		<span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:20px;"><strong>Complete la información para crear el nuevo mundo</strong></span><span style="color:#FFFFFF;font-family:'Trebuchet MS';font-size:13px;"><br></span>
 		<br>
 		
 			<!-- Lo que ya teniaaa empieza aca -->
@@ -79,7 +79,7 @@
     	<tr>
     	<td>
 	    <div style="width: 100%;">
-    		<label class="control-label" style="font-family: 'Trebuchet MS';">Seleccione la imágen del mundo</label>
+    		<label class="control-label" style="font-family: 'Trebuchet MS';">Seleccione la imagen del mundo</label>
 			<input id="input-1" type="file" class="file" width="50px">
     	</div>
 		</td>
@@ -90,7 +90,7 @@
 			<label style="font-family: 'Trebuchet MS';">Nombre</label>
     		<input id="nombre">
     		<br><br>
-    		<label style="font-family: 'Trebuchet MS';">Experiencia </label>
+    		<label style="font-family: 'Trebuchet MS';">Experiencia</label>
     		<input id ="experiencia"></input>
     	</div>
     	</td>
