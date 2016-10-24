@@ -49,7 +49,7 @@ function guardarMensaje(){
 	}
 
 	$.ajax(settings).done(function (response) {
-		alert("envio el msj");
+		//alert("envio el msj");
 		window.location.href = "VerMensajes.jsp"
 
 	});
