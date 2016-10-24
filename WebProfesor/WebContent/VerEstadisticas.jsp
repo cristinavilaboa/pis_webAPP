@@ -109,8 +109,8 @@
 									<th style="text-align: left; font-family: Trebuchet MS;">Nivel</th>
 									<th style="text-align: left; font-family: Trebuchet MS;">Mundo</th>
 									<th style="text-align: left; font-family: Trebuchet MS;">  </th>
-									<th style="text-align: left; font-family: Trebuchet MS;">Cantidad de Intentos</th>
-									<th style="text-align: left; font-family: Trebuchet MS;">Cantidad de Aciertos</th>
+									<th style="text-align: left; font-family: Trebuchet MS;" >Cantidad de Intentos</th>
+									<th style="text-align: left; font-family: Trebuchet MS;">Porcentaje de error</th>
 								</tr>
 							</thead>
 							<tbody id="tbodyestadisticas" style="background-color: white;">
