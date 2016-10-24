@@ -119,7 +119,7 @@ function guardarPregunta(){
 function guardarProblema(path){
 	//alert("entre al guardar");
 	var mundo = $('#lista').val();
-	var nivel = $('#lista2').val();
+	var nivel = $('#lista2 option:selected').html();
 	var resp = $('#respuesta').val();
 	var ayuda = $('#ayuda').val();
 	var puntos = $('#puntaje').val();
