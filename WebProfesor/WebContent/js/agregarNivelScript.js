@@ -49,8 +49,8 @@ function AgregarNivel(){
 			}
 
 			$.ajax(settings).done(function (response) {
-			  alert("agregobien");
-			  location.href="Menu.html";
+				alert("Nivel agregado");
+			 	location.href="index.html";
 			});
 }
 
