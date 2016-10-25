@@ -25,9 +25,9 @@ function cargarMensajes(){
 			var date = new Date(dateStr);
 			
     		var eachrow = "<tr>"
-                + "<td> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
-                + "<td>" + item.asunto + "</td>"
-                + "<td>" + date.toDateString() + "</td>"
+                + "<td nowrap> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
+                + "<td nowrap>" + item.asunto + "</td>"
+                + "<td nowrap>" + date.toDateString() + "</td>"
                 + "</tr>";
     		$('#tbodynuevos').append(eachrow);
     		
@@ -35,7 +35,7 @@ function cargarMensajes(){
    			$("#"+item.id).attr("href",url);
 		});
 		} else{
-			var eachrow = "<tr> <td> </td> <td> No hay mensajes nuevos </td> <td> </td> </tr>";
+			var eachrow = "<tr> <td width=200>No hay mensajes nuevos</td> <td></td> <td></td> </tr>";
 			$('#tbodynuevos').append(eachrow);
 			}
 
@@ -67,9 +67,9 @@ function cargarMensajes(){
 			//alert(date);
 			
   			var eachrow = "<tr>"
-              + "<td> <a id=" + item.id + " href=#>" + item.remitente + "</a>" + "</td>"
-              + "<td>" + item.asunto + "</td>"
-              + "<td>" + date.toDateString() + "</td>"
+              + "<td nowrap> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
+              + "<td nowrap>" + item.asunto + "</td>"
+              + "<td nowrap>" + date.toDateString() + "</td>"
               + "</tr>" ;
               
   			$('#tbodyviejos').append(eachrow);
@@ -79,7 +79,7 @@ function cargarMensajes(){
     		
 		});
 		} else{
-			var eachrow = "<tr> <td> </td> <td> No hay mensajes viejos </td> <td> </td> </tr>";
+			var eachrow = "<tr> <td width=200>No hay mensajes viejos</td> <td></td> <td></td> </tr>";
 			$('#tbodyviejos').append(eachrow);
 		}
 	});	
