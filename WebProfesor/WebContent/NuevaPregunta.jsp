@@ -45,7 +45,7 @@
 		</div>
 		<div id="wb_CssMenu1" style="position:absolute;left:145px;top:97px;width:504px;height:28px;z-index:9;">
 			<ul>
-				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Home</a>
+				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Inicio</a>
 				</li>
 				<li><a href="./VerMensajes.jsp" target="_self" title="Mensajes">Mensajes</a>
 				</li>
@@ -60,7 +60,7 @@
 						</li>
 					</ul>
 				</li>
-				<li><a href="./VerEstadisticas.jsp" target="_self" title="Estadisticas">Estadisticas</a>
+				<li><a href="./VerEstadisticas.jsp" target="_self" title="Estadisticas">Estadísticas</a>
 				</li>
 			</ul>
 		</div>
@@ -146,6 +146,32 @@
   </div>
 </div>
 
+<script>
+var modal = document.getElementById('myModal');
+
+//Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+//Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+//When the user clicks the button, open the modal
+btn.onclick = function() {
+modal.style.display = "block";
+}
+
+//When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+//When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+   modal.style.display = "none";
+}
+}
+</script>
 <script src="bootstrap/js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="bootstrap/js/fileinput.min.js"></script>
