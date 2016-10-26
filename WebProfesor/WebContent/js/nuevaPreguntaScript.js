@@ -133,6 +133,7 @@ function guardarProblema(path){
 			  //alert("agregobien");
 			  $('#myModal').hide();
 			  alert("Problema agregado");
+			  location.href="index.html";
 			});
 
 }
