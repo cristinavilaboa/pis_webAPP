@@ -66,7 +66,7 @@
 		</div>
 	<!-- ************************** FIN HEADER ***************************************-->
 		<!-- wb_Shape5 es el contenedor donde van las cosas -->
-		<div id="wb_Shape5" style="position:absolute;left:10px;top:204px;width:781px;height:548px;z-index:10;">
+		<div id="wb_Shape5" style="position:absolute;left:10px;top:204px;width:781px;height:548px;z-index:4;">
 			<div id="Shape5">
 			</div>
 		</div>
