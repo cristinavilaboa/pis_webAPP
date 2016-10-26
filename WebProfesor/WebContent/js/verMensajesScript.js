@@ -24,15 +24,21 @@ function cargarMensajes(){
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
 			
-    		var eachrow = "<tr>"
-                + "<td nowrap> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
+			var url = "Mensaje.jsp?source=" + item.id;
+			
+    		var eachrow = "<tr data-href=" + url + ">"
+                + "<td nowrap>" + item.remitente + "</a></td>"
                 + "<td nowrap>" + item.asunto + "</td>"
                 + "<td nowrap>" + date.toDateString() + "</td>"
                 + "</tr>";
     		$('#tbodynuevos').append(eachrow);
     		
-   			var url = "Mensaje.jsp?source=" + item.id;
-   			$("#"+item.id).attr("href",url);
+    		$('tr[data-href]').on("click", function() {
+  			    document.location = $(this).data('href');
+  			});
+    		
+   			
+
 		});
 		} else{
 			var eachrow = "<tr> <td width=200>No hay mensajes nuevos</td> <td></td> <td></td> </tr>";
@@ -66,18 +72,22 @@ function cargarMensajes(){
 			var date = new Date(dateStr);
 			//alert(date);
 			
-  			var eachrow = "<tr>"
-              + "<td nowrap> <a id=" + item.id + " href=#>" + item.remitente + "</a></td>"
+			var url = "Mensaje.jsp?source=" + item.id;
+			
+  			var eachrow = "<tr data-href=" + url + ">"
+              + "<td nowrap>" + item.remitente + "</td>"
               + "<td nowrap>" + item.asunto + "</td>"
               + "<td nowrap>" + date.toDateString() + "</td>"
               + "</tr>" ;
-              
-  			$('#tbodyviejos').append(eachrow);
-  
-  			var url = "Mensaje.jsp?source=" + item.id;
-    		$("#"+item.id).attr("href",url);
+      
     		
-		});
+  			$('#tbodyviejos').append(eachrow);
+  			
+  			$('tr[data-href]').on("click", function() {
+  			    document.location = $(this).data('href');
+  			});
+
+  		});
 		} else{
 			var eachrow = "<tr> <td width=200>No hay mensajes viejos</td> <td></td> <td></td> </tr>";
 			$('#tbodyviejos').append(eachrow);

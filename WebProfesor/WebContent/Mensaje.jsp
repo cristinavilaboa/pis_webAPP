@@ -47,9 +47,9 @@
 			<ul>
 				<li class="firstmain"><a href="./index.html" target="_self" title="Home">Inicio</a>
 				</li>
-				<li><a href="./VerMensajes.jsp" target="_self" title="Mensajes">Mensajes</a>
+				<li><a class="active" href="./VerMensajes.jsp" target="_self" title="Mensajes">Mensajes</a>
 				</li>
-				<li><a class="active" class="withsubmenu" href="#" target="_self" title="Services">Nuevo</a>
+				<li><a class="withsubmenu" href="#" target="_self" title="Services">Nuevo</a>
 
 					<ul>
 						<li class="firstitem"><a href="./NuevaPregunta.jsp" target="_self" title="Problema">Problema</a>

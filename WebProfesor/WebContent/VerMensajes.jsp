@@ -92,7 +92,7 @@
 									<th style="text-align: left; font-family: Trebuchet MS;">Fecha</th>
 								</tr>
 							</thead>
-							<tbody id="tbodynuevos" style="background-color: white;">								
+							<tbody id="tbodynuevos" style="background-color: white; cursor: pointer;">								
 							</tbody>
 						</table>
 					</div>
@@ -105,7 +105,7 @@
 									<th style="text-align: left; font-family: Trebuchet MS;">Fecha</th>
 								</tr>
 							</thead>
-							<tbody id="tbodyviejos" style="background-color: white;">
+							<tbody id="tbodyviejos" style="background-color: white; cursor: pointer;">
 							</tbody>
 						</table>
 					</div>
