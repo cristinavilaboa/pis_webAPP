@@ -48,11 +48,16 @@
   background: #928695;
   width: 30%;
   border: 0;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
+  border-radius: 7px 7px 7px 7px;
+-moz-border-radius: 7px 7px 7px 7px;
+-webkit-border-radius: 7px 7px 7px 7px;
+border: 0px solid #000000;
 }
 
 .estilonuestro:hover,.estilonuestro:active,.estilonuestro:focus {
