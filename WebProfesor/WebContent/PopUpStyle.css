@@ -53,6 +53,10 @@
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
+  border-radius: 7px 7px 7px 7px;
+-moz-border-radius: 7px 7px 7px 7px;
+-webkit-border-radius: 7px 7px 7px 7px;
+border: 0px solid #000000;
 }
 
 .estilonuestro:hover,.estilonuestro:active,.estilonuestro:focus {
