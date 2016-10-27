@@ -84,7 +84,7 @@
 
 				<div class="tab-content">
 					<div id="home" class="tab-pane fade in active">
-						<table id="tabla" class="table table-hover" style="background-color: white;">
+						<table id="tabla" class="table table-hover scrollable-menu2" style="background-color: white;">
 							<thead id="theadnuevos" style="background-color: white;">
 								<tr>
 									<th style="text-align: left; font-family: Trebuchet MS;">Remitente</th>
@@ -97,7 +97,7 @@
 						</table>
 					</div>
 					<div id="menu1" class="tab-pane fade">
-						<table class="table table-hover" style="background-color: white;">
+						<table class="table table-hover scrollable-menu2" style="background-color: white;">
 							<thead id="theadviejos" style="background-color: white;">
 								<tr>
 									<th style="text-align: left; font-family: Trebuchet MS;">Remitente</th>

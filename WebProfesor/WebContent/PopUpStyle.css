@@ -63,3 +63,9 @@ border: 0px solid #000000;
 .estilonuestro:hover,.estilonuestro:active,.estilonuestro:focus {
   background: #4A235A;
 }
+
+.scrollable-menu2 {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}

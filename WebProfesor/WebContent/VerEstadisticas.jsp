@@ -100,7 +100,7 @@
 				</ul>
 
 				<div class="tab-content">
-					<div id="home" class="tab-pane fade in active">
+					<div id="home" class="tab-pane fade in active  scrollable-menu2">
 
 						<table class="table table-hover" style="background-color: white;">
 							<thead id="thead" style="background-color: white;">
@@ -119,8 +119,8 @@
 						</table>
 
 					</div>
-					<div id="menu1" class="tab-pane fade">
-						<table class="table table-hover" style="background-color: white;">
+					<div id="menu1" class="tab-pane fade scrollable-menu2">
+						<table class="table table-hover " style="background-color: white;">
 							<thead id="theadviejos" style="background-color: white;">
 								<tr>
 									<th style="text-align: left; font-family: Trebuchet MS;">Jugador</th>
