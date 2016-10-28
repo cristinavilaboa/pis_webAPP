@@ -1,7 +1,10 @@
 /**
  * 
  */
+
 var BASE_URL = "http://localhost:8080/Servidor/";
+
+//var BASE_URL = "http://servidorgrupo8.azurewebsites.net/Servidor/";
 
 var DROPBOX_URL="https://content.dropboxapi.com/1/files_put/auto/";
 
