@@ -55,9 +55,5 @@ function AgregarNivel(){
 }
 
 function habilitarCrear(){
-	$('#myBtn').attr('disabled', false);
-}
-
-function Salir(){
-	window.location.href = "login.html"
+	$('#crearN').attr('disabled', false);
 }
