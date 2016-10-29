@@ -15,7 +15,13 @@
 <script type="text/javascript" src="js/global_source.js"></script>
 <script type="text/javascript" src="js/mensajeScript.js"></script>
 </head>
-<body onload="cargarMensaje()">
+<body onload="cargarMensaje()">  
+
+
+
+
+
+
 <!-- ************************** HEADER ***************************************-->
 	<div id="Layer1" style="position:absolute;text-align:center;left:0px;top:0px;width:100%;height:97px;z-index:3;">
 		<div id="Layer1_Container" style="width:800px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
