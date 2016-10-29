@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/global_source.js"></script>
-  <script type="text/javascript" src="js/nuevaPreguntaScript.js"></script>
+  <script type="text/javascript" src="../js/global_source.js"></script>
+  <script type="text/javascript" src="../js/nuevaPreguntaScript.js"></script>
+  <script type="text/javascript" src="../js/header.js"></script>
  </head>
 
 
-<body onload="cagarMundos()" style="background-color:#75507b;color:#FFFFFF;">
+<body id="addProblema" onload="cagarMundos()" style="background-color:#75507b;color:#FFFFFF;">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
    <h2 class= "col-sm-offset-3 col-sm-9">Informacion del nuevo problema</h2>
