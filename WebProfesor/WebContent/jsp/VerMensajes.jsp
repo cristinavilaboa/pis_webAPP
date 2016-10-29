@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/global_source.js"></script>
-  <script type="text/javascript" src="js/verMensajesScript.js"></script>
+  <script type="text/javascript" src="../js/global_source.js"></script>
+  <script type="text/javascript" src="../js/verMensajesScript.js"></script>
  </head>
 
 <body onload="cargarMensajes()" style="background-color:#75507b;color:#FFFFFF;">
@@ -17,6 +17,8 @@
 	<ul class="nav nav-tabs" style="background-color: white;color:#75507b">
 	  <li class="active"><a data-toggle="tab" href="#mnsjn">Mensajes nuevos</a></li>
 	  <li><a data-toggle="tab" href="#mnsjl">Mensajes leidos</a></li>
+	  <li><a data-toggle="tab" href="#reportesnuevos">Reportes nuevos</a></li>
+	  <li><a data-toggle="tab" href="#reportesleidos">Reportes leidos</a></li>
 	</ul>
 	
 	<div class="tab-content" style="background-color: white;color:#75507b">
@@ -43,7 +45,31 @@
 		    </thead>
 		     <tbody id="tbodyviejos"></tbody>
 		  </table>	  
-		</div>
+	 </div>
+	 <div id="reportesnuevos" class="tab-pane fade">
+	    <table class="table table-hover">
+		    <thead>
+		      <tr>
+		        <th>Remitente</th>
+		        <th>Asunto</th>
+		        <th>Fecha</th>
+		      </tr>
+		    </thead>
+		     <tbody id="tbodyrepnuevos"></tbody>
+		  </table>	  
+	 </div>
+	 <div id="reportesleidos" class="tab-pane fade">
+	    <table class="table table-hover">
+		    <thead>
+		      <tr>
+		        <th>Remitente</th>
+		        <th>Asunto</th>
+		        <th>Fecha</th>
+		      </tr>
+		    </thead>
+		     <tbody id="tbodyrepviejos"></tbody>
+		  </table>	  
+	 </div>
 	 </div>
    </div> 
 </body>
