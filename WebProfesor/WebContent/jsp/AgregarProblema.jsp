@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ </head>
+
   <script type="text/javascript" src="../js/global_source.js"></script>
   <script type="text/javascript" src="../js/nuevaPreguntaScript.js"></script>
   <script type="text/javascript" src="../js/header.js"></script>
- </head>
 
-
-<body id="addProblema" onload="cagarMundos()" style="background-color:#75507b;color:#FFFFFF;">
+<body id="addProblema" onload="cargarMundos()" style="background-color:#75507b;color:#FFFFFF;">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
-   <h2 class= "col-sm-offset-3 col-sm-9">Informacion del nuevo problema</h2>
+   <h2 class= "col-sm-offset-3 col-sm-9">Seleccione el mundo y nivel del nuevo problema</h2>
    <form class="form-horizontal">
     <div class="form-group"></div>
      <div class="col-sm-offset-3 col-sm-4">
@@ -35,7 +36,7 @@
       <div class="form-group"></div>
      <div class="form-group">
       <div class="col-sm-offset-3 col-sm-9">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Continuar</button>
+        <button id="crearP" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" disabled="disabled">Continuar</button>
       </div>
     </div>
    </form>
@@ -45,16 +46,15 @@
     <div class="modal-content">
      <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title" align="center">Complete los datos siguientes:</h4>
+      <h4 class="modal-title" align="center">Complete los siguientes datos:</h4>
      </div>
      <div class="modal-body">
       <form class="form-horizontal">
        <div class="form-group"></div>
        <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-9">
-        <label class="btn btn-default btn-file">
-    		Seleccione imagen <input id="input-1" type="file" style="display: none;">
-		</label>
+        <label class="control-label col-sm-offset-1 col-sm-2" for="imagenP">Imagen:</label>
+        <div class="col-sm-7">
+    		<input type="text" class="form-control" id="imagenP" required="required" placeholder="Ingrese la URL de la imagen del problema">
        </div>
        </div>
 	   <div class="form-group"></div>
@@ -88,7 +88,7 @@
       <div class="form-group"></div>
       <div class="form-group">
        <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="guardarPregunta()" class="btn btn-default" role=""data-dismiss="modal">Agregar problema</button>
+        <button type="submit" onclick="guardarProblema()" class="btn btn-default" role=""data-dismiss="modal">Agregar problema</button>
        </div>
       </div>
      </form>

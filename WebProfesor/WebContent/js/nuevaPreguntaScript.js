@@ -75,39 +75,39 @@ function cargarNiveles(){
 };
 
 /****FUNCION PARA GUARDAR LA PREGUNTA EN DROPBOX****/
-function guardarPregunta(){
-	var fileInput = document.getElementById('input-1');
-	var file = fileInput.files[0];
-	var nom = file.name;
-	var formData = new FormData();
-	formData.append("archivo", file);
-	var settings = {
-			  "async": true,
-			  "crossDomain": true,
-			  "url": getDUrl("Preguntas/"+nom),
-			  "method": "PUT",
-			  "headers": {
-			    "authorization": "Bearer 1tfe4ti31eAAAAAAAAAAG5czFEHm52Nz8-gUKW7Ji7lIbtDDUzka7FedQYY2eePG",
-			    "cache-control": "no-cache"
-			  },
-			  "processData": false,
-			  "contentType": false,
-			  "mimeType": "multipart/form-data",
-			  "data": file
-			}
-
-		$.ajax(settings).done(function (response) {
-		  	//alert("holaaaaaa")
-		 	var datos = JSON.parse(response);
-		  	//alert(datos.path);
-			var path2 = datos.path;
-			var p = path2.replace("/","");
-		  	guardarProblema(p);
-		  	//guardarProblema(datos.path);
-		});
-}
+//function guardarPregunta(){
+//	var fileInput = document.getElementById('input-1');
+//	var file = fileInput.files[0];
+//	var nom = file.name;
+//	var formData = new FormData();
+//	formData.append("archivo", file);
+//	var settings = {
+//			  "async": true,
+//			  "crossDomain": true,
+//			  "url": getDUrl("Preguntas/"+nom),
+//			  "method": "PUT",
+//			  "headers": {
+//			    "authorization": "Bearer 1tfe4ti31eAAAAAAAAAAG5czFEHm52Nz8-gUKW7Ji7lIbtDDUzka7FedQYY2eePG",
+//			    "cache-control": "no-cache"
+//			  },
+//			  "processData": false,
+//			  "contentType": false,
+//			  "mimeType": "multipart/form-data",
+//			  "data": file
+//			}
+//
+//		$.ajax(settings).done(function (response) {
+//		  	//alert("holaaaaaa")
+//		 	var datos = JSON.parse(response);
+//		  	//alert(datos.path);
+//			var path2 = datos.path;
+//			var p = path2.replace("/","");
+//		  	guardarProblema(p);
+//		  	//guardarProblema(datos.path);
+//		});
+//}
 /****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR****/
-function guardarProblema(path){
+function guardarProblema(){
 	//alert("entre al guardar");
 	var mundo = $('#lista').val();
 	var nivel = $('#lista2 option:selected').html();
@@ -115,13 +115,14 @@ function guardarProblema(path){
 	var ayuda = $('#ayuda').val();
 	var puntos = $('#puntaje').val();
 	var desc = $('#descripcion').val();
+	var URLimagen = $('#imagenP').val();
 	//alert(nivel);//+" "+nivel+" "+resp+" "+ayuda+" "+puntos+" "+desc+" "path);
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
 			  //"url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
 			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
-			  "url": getUrl("agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
+			  "url": getUrl("agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + URLimagen + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
 			  "method": "POST",
 			  "headers": {
 			    "cache-control": "no-cache",
@@ -138,9 +139,6 @@ function guardarProblema(path){
 }
 
 function habilitarCrear(){
-	$('#myBtn').attr('disabled', false);
+	$('#crearP').attr('disabled', false);
 }
 
-function Salir(){
-	window.location.href = "login.html"
-}

@@ -55,5 +55,5 @@ function AgregarNivel(){
 }
 
 function habilitarCrear(){
-	$('#myBtn').attr('disabled', false);
+	$('#crearN').attr('disabled', false);
 }

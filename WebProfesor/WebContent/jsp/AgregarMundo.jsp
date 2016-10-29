@@ -22,26 +22,26 @@
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="nombre">Nombre:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre del mundo">
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre del mundo" required="required">
       </div>
     </div>
         <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="imagen">Imagen:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="imagen" placeholder="Ingrese la url de la imagen del mundo">
+        <input type="text" class="form-control" id="imagen" placeholder="Ingrese la url de la imagen del mundo" required="required">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="experiencia">Experiencia:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="experiencia" placeholder="Ingrese experiencia">
+        <input type="text" class="form-control" id="experiencia" placeholder="Ingrese experiencia" required="required">
       </div>
     </div>
     
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="descripcion">Descripcion:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion para el mundo">
+        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion para el mundo" required="required">
       </div>
     </div>
     <div class="form-group"></div>

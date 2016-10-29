@@ -27,7 +27,7 @@
      <div class="form-group"></div>
      <div class="form-group">
       <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="AgregarNivel()" class="btn btn-default">Agregar nivel</button>
+        <button id="crearN" type="submit" onclick="AgregarNivel()" class="btn btn-default" disabled="disabled">Agregar nivel</button>
       </div>
     </div>
    </form>
