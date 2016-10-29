@@ -2,7 +2,7 @@
  * 
  */
 function cargarMensaje(){
-	
+	//alert("entro al cargar");
 // funcion para obtener parametro de la url (el id del mensaje)
 	(function($) {  
 		    $.get = function(key)   {  
@@ -37,14 +37,17 @@ function cargarMensaje(){
 
 	$.ajax(settings).done(function (response) {		    	    			    	    
 		var mensaje= response;
-			    
-		$("#asunto").text("Asunto: " + mensaje.asunto);
-		$("#remitente").text("Remitente: " + mensaje.remitente);
+		//alert("leyo el msj");
+		$("#asunto").text(mensaje.asunto);
+		$("#remitente").text(mensaje.remitente);
 		$("#contenido").text(mensaje.contenido);
 			 	
-		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
-	    $("#responder").attr("href",url);
+//		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
+//	    $("#responder").attr("href",url);
 			 	
+		$("#destinatario").text(mensaje.remitente);
+		$("#asuntoEnviar").text(mensaje.asunto);
+		
 
 	});
 	
@@ -64,11 +67,39 @@ function cargarMensaje(){
 
 	$.ajax(settings).done(function (response) {
 		//console.log(response);
-			});
+	});
 	
 }
 
-function Salir(){
-	window.location.href = "login.html"
+/****************RESPONDER MENSAJE**************/
+
+function guardarMensaje(){
+	
+	var destinatario = $('#destinatario').val();
+	var asunto = $('#asuntoEnviar').val();
+	var contenido = $('#mensajeEnviar').val();
+	
+	var settings = {
+  		"async": true,
+  		"crossDomain": true,
+		"url": getUrl("respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing"),
+		//http://servidorgrupo8.azurewebsites.net/Servidor/respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing",
+		
+		"method": "POST",
+  		"headers": {
+  			"Access-Control-Allow-Origin": "*",
+    		"cache-control": "no-cache",
+  		}
+	}
+
+	$.ajax(settings).done(function (response) {
+		//alert("envio el msj");
+		window.location.href = "VerMensajes.jsp"
+		alert("Mensaje enviado");
+
+	});
+	
+	
+
 }
 

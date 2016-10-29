@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Mensaje</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/global_source.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>
+
+</head>
+<script type="text/javascript" src="../js/mensajeScript.js"></script>
+
+<body  id="mensaje" onload="cargarMensaje()" style="background-color:#75507b;color:#FFFFFF;">	
+ <jsp:include page="Header.jsp"></jsp:include>
+ <div class="container">
+ <form class="form-horizontal">
+    <div class="form-group"></div>
+    <div class="form-group">
+      <label class="control-label col-sm-offset-1 col-sm-2" for="asunto">Asunto:</label>
+      <div class="col-sm-7">
+      	<p id ="asunto">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-offset-1 col-sm-2" for="remitente">Remitente:</label>
+            <div class="col-sm-7">
+      	<p id="remitente">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-offset-1 col-sm-2" for="contenido">Contenido:</label>
+            <div class="col-sm-7">
+      	<p id="contenido">
+      </div>
+    </div>
+    <div class="form-group"></div>
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-10">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" class="btn btn-default">Responder</button>
+      </div>
+    </div>
+  </form>
+  
+    <div id="myModal" class="modal fade" role="dialog" style="color: #75507b">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title" align="center">Escriba su mensaje:</h4>
+     </div>
+     <div class="modal-body">
+      <form class="form-horizontal">
+       <div class="form-group"></div>
+       <div class="form-group">
+        <label class="control-label col-sm-offset-1 col-sm-2" for="dest">Destinatario:</label>
+        <div class="col-sm-7">
+    		<textarea class="form-control" id="destinatario"></textarea>
+       </div>
+       </div>
+	   <div class="form-group"></div>
+       <div class="form-group">
+      	<label class="control-label col-sm-offset-1 col-sm-2" for="asunto">Asunto:</label>
+      	<div class="col-sm-7">
+         <textarea class="form-control" id="asuntoEnviar" required="required"></textarea>
+      	</div>
+       </div>
+       <div class="form-group"></div>
+       <div class="form-group">
+       <label class="control-label col-sm-offset-1 col-sm-2" for="puntaje">Mensaje:</label>
+       <div class="col-sm-7">
+        <textarea class="form-control" id="mensajeEnviar" required="required"> </textarea>
+       </div>
+      </div>
+      <div class="form-group"></div>
+      <div class="form-group">
+       <div class="col-sm-offset-3 col-sm-9">
+        <button type="submit" onclick="guardarMensaje()" class="btn btn-default" role=""data-dismiss="modal">Enviar</button>
+       </div>
+      </div>
+     </form>
+    </div>
+   </div>
+  </div>
+   </div>
+ 
+  
+</div>
+</body>
+</html>

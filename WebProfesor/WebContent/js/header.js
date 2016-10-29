@@ -1,5 +1,6 @@
 $(function () {
 	$("#mensajes a:contains('Mensajes')").parent().addClass("active");
+	$("#mensaje a:contains('Mensajes')").parent().addClass("active");
 	$("#index a:contains('Inicio')").parent().addClass("active");
 	$("#estadisticas a:contains('Estadisticas')").parent().addClass("active");
 	$("#addMundo a:contains('Mundo')").parent().addClass("active");
