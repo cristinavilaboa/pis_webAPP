@@ -45,8 +45,8 @@ function cargarMensaje(){
 //		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
 //	    $("#responder").attr("href",url);
 			 	
-		$("#destinatario").text(mensaje.remitente);
-		$("#asuntoEnviar").text(mensaje.asunto);
+		$("#destinatario").val(mensaje.remitente);
+		$("#asuntoEnviar").val(mensaje.asunto);
 		
 
 	});

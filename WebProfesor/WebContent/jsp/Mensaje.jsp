@@ -57,21 +57,21 @@
        <div class="form-group">
         <label class="control-label col-sm-offset-1 col-sm-2" for="dest">Destinatario:</label>
         <div class="col-sm-7">
-    		<textarea class="form-control" id="destinatario"></textarea>
+    		<input class="form-control" id="destinatario">
        </div>
        </div>
 	   <div class="form-group"></div>
        <div class="form-group">
       	<label class="control-label col-sm-offset-1 col-sm-2" for="asunto">Asunto:</label>
       	<div class="col-sm-7">
-         <textarea class="form-control" id="asuntoEnviar" required="required"></textarea>
+         <input class="form-control" id="asuntoEnviar" required="required">
       	</div>
        </div>
        <div class="form-group"></div>
        <div class="form-group">
        <label class="control-label col-sm-offset-1 col-sm-2" for="puntaje">Mensaje:</label>
        <div class="col-sm-7">
-        <textarea class="form-control" id="mensajeEnviar" required="required"> </textarea>
+        <textarea class="form-control" id="mensajeEnviar" required="required" rows="10"> </textarea>
        </div>
       </div>
       <div class="form-group"></div>

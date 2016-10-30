@@ -34,7 +34,7 @@
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="experiencia">Experiencia:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="experiencia" placeholder="Ingrese experiencia" required="required">
+        <input type="number" min="0" class="form-control" id="experiencia" placeholder="Ingrese experiencia" required="required">
       </div>
     </div>
     

@@ -68,7 +68,7 @@
        <div class="form-group">
        <label class="control-label col-sm-offset-1 col-sm-2" for="puntaje">Puntaje:</label>
        <div class="col-sm-7">
-        <input type="text" class="form-control" id="puntaje" required="required" placeholder="Ingrese un puntaje para el problema">
+        <input type="number" min="0" class="form-control" id="puntaje" required="required" placeholder="Ingrese un puntaje para el problema">
        </div>
       </div>
       <div class="form-group"></div>
