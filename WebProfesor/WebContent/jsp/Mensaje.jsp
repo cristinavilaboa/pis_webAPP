@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-offset-1 col-sm-2" for="contenido">Contenido:</label>
+      <label class="control-label col-sm-offset-1 col-sm-2" for="contenido">Mensaje:</label>
             <div class="col-sm-7">
       	<textarea id="contenido" class="form-control" readonly></textarea>
       </div>
