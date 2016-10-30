@@ -38,8 +38,8 @@ function cargarMensaje(){
 	$.ajax(settings).done(function (response) {		    	    			    	    
 		var mensaje= response;
 		//alert("leyo el msj");
-		$("#asunto").text(mensaje.asunto);
-		$("#remitente").text(mensaje.remitente);
+		$("#asunto").val(mensaje.asunto);
+		$("#remitente").val(mensaje.remitente);
 		$("#contenido").text(mensaje.contenido);
 			 	
 //		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;

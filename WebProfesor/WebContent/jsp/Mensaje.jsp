@@ -16,24 +16,25 @@
 <body  id="mensaje" onload="cargarMensaje()" style="background-color:#75507b;color:#FFFFFF;">	
  <jsp:include page="Header.jsp"></jsp:include>
  <div class="container">
+ <h2 class= "col-sm-offset-3 col-sm-9">Mensaje</h2>
  <form class="form-horizontal">
     <div class="form-group"></div>
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="asunto">Asunto:</label>
       <div class="col-sm-7">
-      	<p id ="asunto">
+      	<input id ="asunto" class="form-control" readonly>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="remitente">Remitente:</label>
             <div class="col-sm-7">
-      	<p id="remitente">
+      	<input id="remitente" class="form-control" readonly>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-offset-1 col-sm-2" for="contenido">Contenido:</label>
             <div class="col-sm-7">
-      	<p id="contenido">
+      	<textarea id="contenido" class="form-control" readonly></textarea>
       </div>
     </div>
     <div class="form-group"></div>
