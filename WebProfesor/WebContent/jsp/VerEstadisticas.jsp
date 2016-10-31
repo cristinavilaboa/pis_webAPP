@@ -12,7 +12,7 @@
   <script type="text/javascript" src="../js/header.js"></script>
  </head>
 
-<body id="estadisticas" onload="cargarEstadisticas()" style="background-color:#75507b;color:#FFFFFF;">
+<body id="estadisticasBody" onload="cargarEstadisticas()" style="background-color:#75507b;color:#FFFFFF;">
  <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
 	<ul class="nav nav-tabs" style="background-color: white;color:#75507b">

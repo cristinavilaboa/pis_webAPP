@@ -40,7 +40,7 @@
             <li><a href="AgregarProblema.jsp">Problema</a></li>
           </ul>
         </li>
-        <li><a href="VerMensajes.jsp">Mensajes</a></li>
+        <li><a id="msj" href="VerMensajes.jsp">Mensajes</a></li>
         <li><a href="VerEstadisticas.jsp">Estadisticas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

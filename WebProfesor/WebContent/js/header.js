@@ -1,8 +1,8 @@
 $(function () {
-	$("#mensajes a:contains('Mensajes')").parent().addClass("active");
+	$("#mensajes #msj").parent().addClass("active");
 	$("#mensaje a:contains('Mensajes')").parent().addClass("active");
 	$("#index a:contains('Inicio')").parent().addClass("active");
-	$("#estadisticas a:contains('Estadisticas')").parent().addClass("active");
+	$("#estadisticasBody a:contains('Estadisticas')").parent().addClass("active");
 	$("#addMundo a:contains('Mundo')").parent().addClass("active");
 	$("#addNivel a:contains('Nivel')").parent().addClass("active");
 	$("#addProblema a:contains('Problema')").parent().addClass("active");
