@@ -32,7 +32,7 @@
 		        <th>Fecha</th>
 		      </tr>
 		    </thead>
-		     <tbody id="tbodynuevos"></tbody>
+		     <tbody id="tbodynuevos" style="cursor:pointer;"></tbody>
 		  </table>	  
 		</div>
 	  <div id="mnsjl" class="tab-pane fade">
@@ -44,7 +44,7 @@
 		        <th>Fecha</th>
 		      </tr>
 		    </thead>
-		     <tbody id="tbodyviejos"></tbody>
+		     <tbody id="tbodyviejos" style="cursor:pointer;"></tbody>
 		  </table>	  
 	 </div>
 	 <div id="reportesnuevos" class="tab-pane fade">
@@ -56,7 +56,7 @@
 		        <th>Fecha</th>
 		      </tr>
 		    </thead>
-		     <tbody id="tbodyrepnuevos"></tbody>
+		     <tbody id="tbodyrepnuevos" style="cursor:pointer;"></tbody>
 		  </table>	  
 	 </div>
 	 <div id="reportesleidos" class="tab-pane fade">
@@ -68,7 +68,7 @@
 		        <th>Fecha</th>
 		      </tr>
 		    </thead>
-		     <tbody id="tbodyrepviejos"></tbody>
+		     <tbody id="tbodyrepviejos" style="cursor:pointer;"></tbody>
 		  </table>	  
 	 </div>
 	 </div>

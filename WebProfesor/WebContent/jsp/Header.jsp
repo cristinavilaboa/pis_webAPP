@@ -19,17 +19,20 @@
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header" align="center" >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-       <img src="../Imagenes/Logo.png" class="img-rounded" alt="Brand" width="65px" height="30px">
-      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li>        <img src="../Imagenes/Logo.png" class="img-rounded" alt="Brand" width="90px" height="55px" ></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li>  <a> </a></li>
+      </ul>
       <ul class="nav navbar-nav">
         <li><a href="index.jsp">Inicio</a></li>
         <li class="dropdown">
