@@ -17,17 +17,17 @@
 <body id="addProblema" onload="cargarMundos()" style="background-color:#75507b;color:#FFFFFF;">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
-   <h2 class= "col-sm-offset-3 col-sm-9">Seleccione el mundo y nivel del nuevo problema</h2>
+   <h2 class= "text-center">Seleccione el mundo y nivel del nuevo problema</h2>
    <form class="form-horizontal">
     <div class="form-group"></div>
-     <div class="col-sm-offset-3 col-sm-4">
+     <div class="col-sm-offset-4 col-sm-4">
       <select id ="lista" class="form-control" onchange="cargarNiveles()">
        <option value ="">Seleccione el mundo</option>
 	  </select>
 	 </div>
 	 <div class="form-group"></div>
      <div class="form-group"></div>
-     <div class="col-sm-offset-3 col-sm-4">
+     <div class="col-sm-offset-4 col-sm-4">
        <select id ="lista2" class="form-control" onchange="habilitarCrear()" size="1">
 		<option value = "">Seleccione el nivel</option>
 	   </select> 
@@ -35,9 +35,7 @@
      <div class="form-group"></div>
       <div class="form-group"></div>
      <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-9">
-        <button id="crearP" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" disabled="disabled">Continuar</button>
-      </div>
+        <button id="crearP" type="button" class="btn btn-default center-block" data-toggle="modal" data-target="#myModal" disabled="disabled">Continuar</button>
     </div>
    </form>
   
@@ -59,9 +57,9 @@
        </div>
 	   <div class="form-group"></div>
        <div class="form-group">
-      	<label class="control-label col-sm-offset-1 col-sm-2" for="descripcion">Descripcion:</label>
+      	<label class="control-label col-sm-offset-1 col-sm-2" for="descripcion">Descripción:</label>
       	<div class="col-sm-7">
-         <input type="text" class="form-control" id="descripcion" required="required" placeholder="Ingrese una descripcion para el problema">
+         <input type="text" class="form-control" id="descripcion" required="required" placeholder="Ingrese una descripción para el problema">
       	</div>
        </div>
        <div class="form-group"></div>
@@ -87,9 +85,7 @@
       </div>
       <div class="form-group"></div>
       <div class="form-group">
-       <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="guardarProblema()" class="btn btn-default" role=""data-dismiss="modal">Agregar problema</button>
-       </div>
+        <button type="submit" onclick="guardarProblema()" class="btn btn-default center-block" role=""data-dismiss="modal">AGREGAR PROBLEMA</button>
       </div>
      </form>
     </div>

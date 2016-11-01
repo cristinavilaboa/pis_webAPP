@@ -14,10 +14,10 @@
  <body id="addNivel" onload="cargarMundos()" style="background-color:#75507b;color:#FFFFFF;">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
-   <h2 class= "col-sm-offset-3 col-sm-9">Informacion del nuevo nivel</h2>
+   <h2 class= "text-center">Datos del nuevo nivel</h2>
    <form class="form-horizontal">
     <div class="form-group"></div>
-     <div class="col-sm-offset-3 col-sm-4">
+     <div class="col-sm-offset-3 col-sm-5">
       <select id ="lista" class="form-control" onchange="habilitarCrear()">
        <option value ="">Seleccione el mundo</option>
 	  </select>
@@ -25,10 +25,9 @@
      <div class="form-group"></div>
      <div class="form-group"></div>
      <div class="form-group"></div>
+     <div class="form-group"></div>
      <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-9">
-        <button id="crearN" type="submit" onclick="AgregarNivel()" class="btn btn-default" disabled="disabled">Agregar nivel</button>
-      </div>
+        <button id="crearN" type="submit" onclick="AgregarNivel()" class="btn btn-default center-block" disabled="disabled">AGREGAR NIVEL</button>
     </div>
    </form>
   </div>

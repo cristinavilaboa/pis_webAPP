@@ -44,10 +44,10 @@
           </ul>
         </li>
         <li><a id="msj" href="VerMensajes.jsp">Mensajes</a></li>
-        <li><a href="VerEstadisticas.jsp">Estadisticas</a></li>
+        <li><a href="VerEstadisticas.jsp">Estadísticas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../login.jsp"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="../login.jsp"><span class="glyphicon glyphicon-log-out"></span>SALIR</a></li>
       </ul>
     </div>
   </div>

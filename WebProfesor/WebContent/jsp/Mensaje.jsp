@@ -39,9 +39,7 @@
     </div>
     <div class="form-group"></div>
     <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-10">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" class="btn btn-default">Responder</button>
-      </div>
+        <button type="button" class="btn btn-default center-block" data-toggle="modal" data-target="#myModal" class="btn btn-default">RESPONDER</button>
     </div>
   </form>
   
@@ -77,9 +75,7 @@
       </div>
       <div class="form-group"></div>
       <div class="form-group">
-       <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="guardarMensaje()" class="btn btn-default" role=""data-dismiss="modal">Enviar</button>
-       </div>
+        <button type="submit" onclick="guardarMensaje()" class="btn btn-default center-block" role=""data-dismiss="modal">Enviar</button>
       </div>
      </form>
     </div>
