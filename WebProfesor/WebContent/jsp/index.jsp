@@ -15,5 +15,14 @@
   <h3>Bienvenido</h3>
   <p>En esta pagina usted va a ser capaz de modificar algunos atributos del juego, ayudar  alumnos y ver estadisticas sobre los poblemas establecidos</p>
 </div>
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">© 2016 - Site Built By Go4Calcs
+      </p>
+      
+    </div>
+    
+    
+  </div>
 </body>
 </html>
