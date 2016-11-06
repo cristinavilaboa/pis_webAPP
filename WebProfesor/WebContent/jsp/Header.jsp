@@ -15,9 +15,9 @@
 
 </script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color:#374588; color:white; border:#374588;">
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="background-color:#374588; color:white; border:#374588;">
   <div class="container-fluid">
     <div class="navbar-header" align="center" >
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -34,20 +34,20 @@
         <li>  <a> </a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="index.jsp">Inicio</a></li>
+        <li><a href="index.jsp" style="color: white;">Inicio</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nuevo<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white; ">Nuevo<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="AgregarMundo.jsp">Mundo</a></li>
             <li><a href="AgregarNivel.jsp">Nivel</a></li>
             <li><a href="AgregarProblema.jsp">Problema</a></li>
           </ul>
         </li>
-        <li><a id="msj" href="VerMensajes.jsp">Mensajes</a></li>
-        <li><a href="VerEstadisticas.jsp">Estadisticas</a></li>
+        <li><a id="msj" href="VerMensajes.jsp" style="color: white; background: #273161;">Mensajes</a></li>
+        <li><a href="VerEstadisticas.jsp" style="color: white;">Estadísticas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../login.jsp"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        <li><a href="../login.jsp" style="color: white;"><span class="glyphicon glyphicon-log-out" style="color: white;"></span style="color: white;">SALIR</a></li>
       </ul>
     </div>
   </div>

@@ -12,43 +12,41 @@
   <script type="text/javascript" src="../js/header.js"></script>
 </head>
 
-<body id="addMundo" style="background-color:#75507b;color:#FFFFFF;">
+<body id="addMundo" style="background-color:#e0e0eb;color:#0000a4;">
  <jsp:include page="Header.jsp"></jsp:include>
 
 <div class="container">
-  <h2 class= "col-sm-offset-3 col-sm-9">Datos del nuevo mundo</h2>
+  <h2 class= "text-center">Datos del nuevo mundo</h2>
   <form class="form-horizontal">
     <div class="form-group"></div>
     <div class="form-group">
-      <label class="control-label col-sm-offset-1 col-sm-2" for="nombre">Nombre:</label>
+      <label class="control-label col-sm-offset-1 col-sm-3" for="nombre">Nombre:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre del mundo" required="required">
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre del mundo" required="required">
       </div>
     </div>
         <div class="form-group">
-      <label class="control-label col-sm-offset-1 col-sm-2" for="imagen">Imagen:</label>
+      <label class="control-label col-sm-offset-1 col-sm-3" for="imagen">Imagen:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="imagen" placeholder="Ingrese la url de la imagen del mundo" required="required">
+        <input type="text" class="form-control" id="imagen" placeholder="Ingrese la URL de la imagen del mundo" required="required">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-offset-1 col-sm-2" for="experiencia">Experiencia:</label>
+      <label class="control-label col-sm-offset-1 col-sm-3" for="experiencia">Experiencia:</label>
       <div class="col-sm-5">
-        <input type="number" min="0" class="form-control" id="experiencia" placeholder="Ingrese experiencia" required="required">
+        <input type="number" min="0" class="form-control" id="experiencia" placeholder="Ingrese una experiencia para el mundo" required="required">
       </div>
     </div>
     
     <div class="form-group">
-      <label class="control-label col-sm-offset-1 col-sm-2" for="descripcion">Descripcion:</label>
+      <label class="control-label col-sm-offset-1 col-sm-3" for="descripcion">Descripcion:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese descripcion para el mundo" required="required">
+        <input type="text" class="form-control" id="descripcion" placeholder="Ingrese una descripcion para el mundo" required="required">
       </div>
     </div>
     <div class="form-group"></div>
     <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-10">
-        <button type="submit" onclick="guardarMundo()" class="btn btn-default">Guardar Mundo</button>
-      </div>
+        <button type="submit" onclick="guardarMundo()" class="btn btn-default center-block" style="background: #374588; color: white; ">GUARDAR MUNDO</button>
     </div>
   </form>
 </div>

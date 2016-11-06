@@ -16,7 +16,7 @@
  <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
 	<ul class="nav nav-tabs" style="background-color: white;color:#75507b">
-	  <li class="active"><a data-toggle="tab" href="#estadisticas">Estadisticas</a></li>
+	  <li class="active"><a data-toggle="tab" href="#estadisticas">Estadísticas</a></li>
 	  <li><a data-toggle="tab" href="#ranking">Ranking</a></li>
 	</ul>
 	
@@ -29,7 +29,7 @@
 		       <th>Nivel</th>
 			   <th>Mundo</th>
 			   <th>  </th>
-			   <th>Cantidad de Intentos</th>
+			   <th>Cantidad de intentos</th>
 			   <th>Porcentaje de error</th>
 		      </tr>
 		    </thead>
@@ -49,12 +49,6 @@
 		</div>
 	 </div>
    </div> 
-   <div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left"> © 2016 - Site Built By Go4Calcs
-      </p>
-      
-    </div>
-    </div>
+   
 </body>
 </html>

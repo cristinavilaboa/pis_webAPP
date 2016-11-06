@@ -12,7 +12,7 @@
   <script type="text/javascript" src="../js/header.js"></script>
 </head>
 
-<body id ='mensajes' onload="cargarMensajes()" style="background-color:#75507b;color:#FFFFFF;">
+<body id ='mensajes' onload="cargarMensajes()" style="background-color:#e0e0eb;color:#0000a4;">
  <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
 	<ul class="nav nav-tabs" style="background-color: white;color:#75507b">
@@ -22,7 +22,7 @@
 	  <li><a data-toggle="tab" href="#reportesleidos">Reportes leidos</a></li>
 	</ul>
 	
-	<div class="tab-content" style="background-color: white;color:#75507b">
+	<div class="tab-content" style="background-color: white;color:#374588">
 	  <div id="mnsjn" class="tab-pane fade in active">
 	    <table class="table table-hover" >
 		    <thead>
@@ -73,11 +73,6 @@
 	 </div>
 	 </div>
    </div> 
-   <div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left"> © 2016 - Site Built By Go4Calcs
-      </p>
-      
-    </div>
+   
 </body>
 </html>

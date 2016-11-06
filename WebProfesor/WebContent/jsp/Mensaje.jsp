@@ -13,7 +13,7 @@
 </head>
 <script type="text/javascript" src="../js/mensajeScript.js"></script>
 
-<body  id="mensaje" onload="cargarMensaje()" style="background-color:#75507b;color:#FFFFFF;">	
+<body  id="mensaje" onload="cargarMensaje()" style="background-color:#e0e0eb;color:#0000a4;">	
  <jsp:include page="Header.jsp"></jsp:include>
  <div class="container">
  <h2 class= "col-sm-offset-3 col-sm-9">Mensaje</h2>
@@ -39,9 +39,7 @@
     </div>
     <div class="form-group"></div>
     <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-10">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" class="btn btn-default">Responder</button>
-      </div>
+        <button type="button" class="btn btn-default center-block" data-toggle="modal" data-target="#myModal" class="btn btn-default" style="background: #374588; color: white; ">RESPONDER</button>
     </div>
   </form>
   
@@ -77,9 +75,7 @@
       </div>
       <div class="form-group"></div>
       <div class="form-group">
-       <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="guardarMensaje()" class="btn btn-default" role=""data-dismiss="modal">Enviar</button>
-       </div>
+        <button type="submit" onclick="guardarMensaje()" class="btn btn-default center-block" role=""data-dismiss="modal">Enviar</button>
       </div>
      </form>
     </div>
