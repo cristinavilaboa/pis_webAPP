@@ -11,7 +11,7 @@
   <script type="text/javascript" src="../js/agregarNivelScript.js"></script>
   <script type="text/javascript" src="../js/header.js"></script>
  </head>  
- <body id="addNivel" onload="cargarMundos()" style="background-color:#75507b;color:#FFFFFF;">
+ <body id="addNivel" onload="cargarMundos()">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
    <h2 class= "text-center">Datos del nuevo nivel</h2>

@@ -13,7 +13,7 @@
 </head>
 <script type="text/javascript" src="../js/reporteScript.js"></script>
 
-<body  id="mensaje" onload="cargarMensaje()" style="background-color:#75507b;color:#FFFFFF;">	
+<body  id="mensaje" onload="cargarMensaje()">	
  <jsp:include page="Header.jsp"></jsp:include>
  <div class="container">
  <h2 class= "col-sm-offset-3 col-sm-9">Mensaje</h2>

@@ -9,7 +9,7 @@
 <script type="text/javascript" src="../js/header.js"></script>
 </head>
 
-<body  id="index" style="background-color:#75507b;color:#FFFFFF;">	
+<body  id="index">	
  <jsp:include page="Header.jsp"></jsp:include>
  <div class="container">
   <h3>Bienvenido</h3>

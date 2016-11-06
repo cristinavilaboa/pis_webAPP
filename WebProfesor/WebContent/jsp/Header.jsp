@@ -14,8 +14,34 @@
     });
 
 </script>
+<style type="text/css">
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover{
+    background-color: #273161;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: #273161;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu{
+	background-color: #374588;
+}
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    background-color: #273161;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background-color: #273161;
+  }
+
+</style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color:#374588; color:white; border:#374588;">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color:#e0e0eb; color:#0000a4; border:#374588;">
 
 <nav class="navbar navbar-default" style="background-color:#374588; color:white; border:#374588;">
   <div class="container-fluid">
@@ -34,20 +60,20 @@
         <li>  <a> </a></li>
       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="index.jsp" style="color: white;">Inicio</a></li>
+        <li><a href="index.jsp" style="color:white;">Inicio</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: white; ">Nuevo<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">Nuevo<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="AgregarMundo.jsp">Mundo</a></li>
-            <li><a href="AgregarNivel.jsp">Nivel</a></li>
-            <li><a href="AgregarProblema.jsp">Problema</a></li>
+            <li><a href="AgregarMundo.jsp" style="color:white;">Mundo</a></li>
+            <li><a href="AgregarNivel.jsp" style="color:white;">Nivel</a></li>
+            <li><a href="AgregarProblema.jsp" style="color:white;">Problema</a></li>
           </ul>
         </li>
-        <li><a id="msj" href="VerMensajes.jsp" style="color: white; background: #273161;">Mensajes</a></li>
-        <li><a href="VerEstadisticas.jsp" style="color: white;">Estadísticas</a></li>
+        <li><a id="msj" href="VerMensajes.jsp" style="color:white;">Mensajes</a></li>
+        <li><a href="VerEstadisticas.jsp" style="color:white;">Estadisticas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../login.jsp" style="color: white;"><span class="glyphicon glyphicon-log-out" style="color: white;"></span style="color: white;">SALIR</a></li>
+        <li><a href="../login.jsp" style="color:white;"><span class="glyphicon glyphicon-log-out" style="color:white;"></span>SALIR</a></li>
       </ul>
     </div>
   </div>

@@ -12,7 +12,7 @@
   <script type="text/javascript" src="../js/header.js"></script>
 </head>
 
-<body id="addMundo" style="background-color:#e0e0eb;color:#0000a4;">
+<body id="addMundo">
  <jsp:include page="Header.jsp"></jsp:include>
 
 <div class="container">

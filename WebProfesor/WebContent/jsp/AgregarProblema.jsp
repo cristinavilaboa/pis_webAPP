@@ -14,7 +14,7 @@
   <script type="text/javascript" src="../js/nuevaPreguntaScript.js"></script>
   <script type="text/javascript" src="../js/header.js"></script>
 
-<body id="addProblema" onload="cargarMundos()" style="background-color:#e0e0eb;color:#0000a4;">
+<body id="addProblema" onload="cargarMundos()">
   <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
    <h2 class= "text-center">Seleccione el mundo y nivel del nuevo problema</h2>
