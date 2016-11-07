@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
 	<title>Header</title>
 	
-	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -97,7 +96,13 @@
 						</ul>
 					</li>
 					<li><a id="msj" href="VerMensajes.jsp" style="color:white;">Mensajes</a></li>
-					<li><a href="VerEstadisticas.jsp" style="color:white;">Estadísticas</a></li>
+					<li><a href="VerEstadisticas.jsp" style="color:white;">Estadisticas</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">Modificar<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="ModificarProblema.jsp" style="color:white;">Problema</a></li>
+						</ul>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="../login.jsp" style="color:white;"><span class="glyphicon glyphicon-log-out" style="color:white;"></span> SALIR</a></li>

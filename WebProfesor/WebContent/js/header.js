@@ -6,6 +6,11 @@ $(function () {
 	$("#addMundo a:contains('Mundo')").parent().addClass("active");
 	$("#addNivel a:contains('Nivel')").parent().addClass("active");
 	$("#addProblema a:contains('Problema')").parent().addClass("active");
+	$("#addMProblema a:contains('ModificarProblema')").parent().addClass("active");
+	
+	if($("#addMProblema a:contains('ModificarProblema')").parent().hasClass("active")){
+		$(".dropdown a:contains('Modificar')").parent().addClass("active");
+	}
 	
 	if($("#addMundo a:contains('Mundo')").parent().hasClass("active")){
 		$(".dropdown a:contains('Nuevo')").parent().addClass("active");
