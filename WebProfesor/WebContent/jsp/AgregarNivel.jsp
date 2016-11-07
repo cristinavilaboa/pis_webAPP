@@ -17,8 +17,8 @@
    <h2 class= "text-center">Datos del nuevo nivel</h2>
    <form class="form-horizontal">
     <div class="form-group"></div>
-     <div class="col-sm-offset-3 col-sm-5">
-      <select id ="lista" class="form-control" onchange="habilitarCrear()">
+     <div class="col-sm-offset-3 col-sm-5" style="padding-left: 10%">
+      <select id ="lista" class="form-control" onchange="habilitarCrear()" >
        <option value ="">Seleccione el mundo</option>
 	  </select>
 	 </div>

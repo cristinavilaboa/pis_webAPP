@@ -51,6 +51,19 @@
 			border-color: #fff;
 		}
 		
+		.btn, .btn-default{
+			color: white;
+			background-color: #374588;
+		}
+		
+		.btn:hover,
+		.btn:focus,
+		.btn:focus:disabled,
+		.btn:hover:disabled{
+			background-color: #273161;
+			color: white;
+		}
+		
 	</style>
 
 </head>
@@ -87,7 +100,7 @@
 					<li><a href="VerEstadisticas.jsp" style="color:white;">Estadísticas</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="../login.jsp" style="color:white;"><span class="glyphicon glyphicon-log-out" style="color:white;"></span>SALIR</a></li>
+					<li><a href="../login.jsp" style="color:white;"><span class="glyphicon glyphicon-log-out" style="color:white;"></span> SALIR</a></li>
 				</ul>
 			</div>
 		</div>

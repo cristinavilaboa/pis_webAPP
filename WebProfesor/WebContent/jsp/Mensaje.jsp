@@ -39,11 +39,11 @@
     </div>
     <div class="form-group"></div>
     <div class="form-group">
-        <button type="button" class="btn btn-default center-block" data-toggle="modal" data-target="#myModal" class="btn btn-default" style="background: #374588; color: white; ">RESPONDER</button>
+        <button type="button" class="btn btn-default center-block" data-toggle="modal" data-target="#myModal" class="btn btn-default">RESPONDER</button>
     </div>
   </form>
   
-    <div id="myModal" class="modal fade" role="dialog" style="color: #75507b">
+    <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
      <div class="modal-header">

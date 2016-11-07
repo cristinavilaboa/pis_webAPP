@@ -46,7 +46,7 @@
     </div>
     <div class="form-group"></div>
     <div class="form-group">
-        <button type="submit" onclick="guardarMundo()" class="btn btn-default center-block" style="background: #374588; color: white; ">GUARDAR MUNDO</button>
+        <button type="submit" onclick="guardarMundo()" class="btn btn-default center-block">GUARDAR MUNDO</button>
     </div>
   </form>
 </div>
