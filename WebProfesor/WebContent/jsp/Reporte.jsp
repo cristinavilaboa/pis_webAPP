@@ -16,7 +16,7 @@
 <body  id="mensaje" onload="cargarMensaje()">	
  <jsp:include page="Header.jsp"></jsp:include>
  <div class="container">
- <h2 class= "col-sm-offset-3 col-sm-9">Mensaje</h2>
+ <h2 class= "col-sm-offset-3 col-sm-9">Reporte</h2>
  <form class="form-horizontal">
     <div class="form-group"></div>
     <div class="form-group">
@@ -38,54 +38,10 @@
       </div>
     </div>
     <div class="form-group"></div>
-    <div class="form-group">
-      <div class="col-sm-offset-3 col-sm-10">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" class="btn btn-default">Responder</button>
-      </div>
-    </div>
+   
   </form>
   
-    <div id="myModal" class="modal fade" role="dialog" style="color: #75507b">
-  <div class="modal-dialog">
-    <div class="modal-content">
-     <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title" align="center">Escriba su mensaje:</h4>
-     </div>
-     <div class="modal-body">
-      <form class="form-horizontal">
-       <div class="form-group"></div>
-       <div class="form-group">
-        <label class="control-label col-sm-offset-1 col-sm-2" for="dest">Destinatario:</label>
-        <div class="col-sm-7">
-    		<input class="form-control" id="destinatario">
-       </div>
-       </div>
-	   <div class="form-group"></div>
-       <div class="form-group">
-      	<label class="control-label col-sm-offset-1 col-sm-2" for="asunto">Asunto:</label>
-      	<div class="col-sm-7">
-         <input class="form-control" id="asuntoEnviar" required="required">
-      	</div>
-       </div>
-       <div class="form-group"></div>
-       <div class="form-group">
-       <label class="control-label col-sm-offset-1 col-sm-2" for="puntaje">Mensaje:</label>
-       <div class="col-sm-7">
-        <textarea class="form-control" id="mensajeEnviar" required="required" rows="10"> </textarea>
-       </div>
-      </div>
-      <div class="form-group"></div>
-      <div class="form-group">
-       <div class="col-sm-offset-3 col-sm-9">
-        <button type="submit" onclick="guardarMensaje()" class="btn btn-default" role=""data-dismiss="modal">Enviar</button>
-       </div>
-      </div>
-     </form>
-    </div>
-   </div>
-  </div>
-   </div>
+
  
   
 </div>
