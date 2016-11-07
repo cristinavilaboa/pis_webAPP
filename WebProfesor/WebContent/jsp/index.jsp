@@ -15,7 +15,6 @@
   <h3>Bienvenido</h3>
   <p>En esta página usted va a ser capaz de modificar algunos atributos del juego, ayudar alumnos y ver estadísticas sobre los poblemas establecidos.</p>
 </div>
-    
-  </div>
+
 </body>
 </html>
