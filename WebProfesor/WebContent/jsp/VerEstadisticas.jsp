@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <title>Ver Estadisticas</title>
-  <meta charset="utf-8">
+ 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -20,7 +20,7 @@
 	  <li><a data-toggle="tab" href="#ranking">Ranking</a></li>
 	</ul>
 	
-	<div class="tab-content" style="background-color: white;color:#75507b">
+	<div class="tab-content" style="background-color: white;color:#374588">
 	  <div id="estadisticas" class="tab-pane fade in active">
 	    <table class="table table-hover" >
 		    <thead>
