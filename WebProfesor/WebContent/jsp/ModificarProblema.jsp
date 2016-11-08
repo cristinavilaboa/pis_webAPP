@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/global_source.js"></script>
-  <script type="text/javascript" src="../js/modificarProblemaScript.js"></script>
+  <script type="text/javascript" src="../js/modificarProblema.js"></script>
   <script type="text/javascript" src="../js/nuevaPreguntaScript.js"></script>
   <script type="text/javascript" src="../js/header.js"></script>
  </head>

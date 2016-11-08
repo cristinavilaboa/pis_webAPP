@@ -3,9 +3,10 @@
  */
 
 var problemas
-var problema
+var problema 
 
 function cargarProblemas(){
+
 		var id_mundo =$('#lista').val();
 		var id_nivel = $('#lista2').val();
 
@@ -29,10 +30,10 @@ function cargarProblemas(){
 				celldefault.val("");
 				celldefault.text("Seleccione el Problema");
 				$('#idproblema').append(celldefault);
-				for(i = 0;i<problemas.lista.length ;i++){
+				for(i = 0;i<problemas.problemas_nivel.length ;i++){
 					var cell = $('<option>');
 					cell.val(i); //este es el que voy a usar para guardar el problema
-					cell.text(problemas.lista[i].id_problema);
+					cell.text(problemas.problemas_nivel[i].id_problema);
 					$('#idproblema').append(cell);
 				}
 			});
@@ -40,18 +41,25 @@ function cargarProblemas(){
 
 function cargar_datos_problema()
 {
-	var id_problema = ('#idproblema').val;
-	problema = problemas.lista[id_problema];
+	habilitarCrear();
+	var id_problema= $('#idproblema').val();
+	problema = problemas.problemas_nivel[id_problema]
 	var resp = $('#respuesta');
 	resp.val(problema.respuesta);
+	resp.text(problema.respuesta);
 	var ayuda = $('#ayuda')
 	ayuda.val(problema.ayuda);
+	ayuda.text(problema.ayuda);
 	var puntos = $('#puntaje');
 	puntos.val(problema.puntos_exp);
+	puntos.text(problema.puntos_exp);
 	var desc = $('#descripcion')
 	desc.val(problema.descripcion);
+	desc.text(problema.descripcion);
 	var URLimagen = $('#imagenP');
 	URLimagen.val(problema.contenido);
+	URLimagen.text(problema.contenido);
+	
 }
 
 
@@ -71,7 +79,7 @@ function actualizarProblema(){
 			  "crossDomain": true,
 			  //"url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
 			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
-			  "url": getUrl("modificarproblema?id=" + getproblemaid + "&desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + URLimagen + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
+			  "url": getUrl("modificarproblema?id_problema=" + getproblemaid + "&desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + URLimagen + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
 			  "method": "POST",
 			  "headers": {
 			    "cache-control": "no-cache",
