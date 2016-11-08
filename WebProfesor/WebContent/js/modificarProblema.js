@@ -91,6 +91,7 @@ function actualizarProblema(){
 			  //alert("agregobien");
 			  $('#myModal').hide();
 			  alert("Problema Modificado");
+			  window.location.href = "../jsp/index.jsp"
 			});
 
 }
