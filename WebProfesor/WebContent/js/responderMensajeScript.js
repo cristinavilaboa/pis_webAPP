@@ -38,7 +38,7 @@ function guardarMensaje(){
 	var settings = {
   		"async": true,
   		"crossDomain": true,
-		"url": getUrl("respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing"),
+		"url": getUrl("respondermensaje?destinatario=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&remitente=marce_fing"),
 		//http://servidorgrupo8.azurewebsites.net/Servidor/respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing",
 		
 		"method": "POST",

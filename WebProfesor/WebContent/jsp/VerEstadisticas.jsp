@@ -15,7 +15,7 @@
 <body id="estadisticasBody" onload="cargarEstadisticas()">
  <jsp:include page="Header.jsp"></jsp:include>
   <div class="container">
-	<ul class="nav nav-tabs" style="background-color: white;color:#75507b">
+	<ul class="nav nav-tabs" style="background-color: white;color:#374588">
 	  <li class="active"><a data-toggle="tab" href="#estadisticas">Estadísticas</a></li>
 	  <li><a data-toggle="tab" href="#ranking">Ranking</a></li>
 	</ul>

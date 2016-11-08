@@ -74,38 +74,7 @@ function cargarNiveles(){
 			});
 };
 
-/****FUNCION PARA GUARDAR LA PREGUNTA EN DROPBOX****/
-//function guardarPregunta(){
-//	var fileInput = document.getElementById('input-1');
-//	var file = fileInput.files[0];
-//	var nom = file.name;
-//	var formData = new FormData();
-//	formData.append("archivo", file);
-//	var settings = {
-//			  "async": true,
-//			  "crossDomain": true,
-//			  "url": getDUrl("Preguntas/"+nom),
-//			  "method": "PUT",
-//			  "headers": {
-//			    "authorization": "Bearer 1tfe4ti31eAAAAAAAAAAG5czFEHm52Nz8-gUKW7Ji7lIbtDDUzka7FedQYY2eePG",
-//			    "cache-control": "no-cache"
-//			  },
-//			  "processData": false,
-//			  "contentType": false,
-//			  "mimeType": "multipart/form-data",
-//			  "data": file
-//			}
-//
-//		$.ajax(settings).done(function (response) {
-//		  	//alert("holaaaaaa")
-//		 	var datos = JSON.parse(response);
-//		  	//alert(datos.path);
-//			var path2 = datos.path;
-//			var p = path2.replace("/","");
-//		  	guardarProblema(p);
-//		  	//guardarProblema(datos.path);
-//		});
-//}
+
 /****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR****/
 function guardarProblema(){
 	//alert("entre al guardar");

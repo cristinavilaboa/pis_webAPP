@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
- </head>
-
   <script type="text/javascript" src="../js/global_source.js"></script>
-  <script type="text/javascript" src="../js/modificarProblemaScript.js"></script>
+  <script type="text/javascript" src="../js/modificarProblema.js"></script>
   <script type="text/javascript" src="../js/nuevaPreguntaScript.js"></script>
   <script type="text/javascript" src="../js/header.js"></script>
+ </head>
+
+  
 
 <body id="addMProblema" onload="cargarMundos()">
   <jsp:include page="Header.jsp"></jsp:include>
@@ -93,7 +93,7 @@
       </div>
       <div class="form-group"></div>
       <div class="form-group">
-        <button type="submit" onclick="actualizarProblema()" class="btn btn-default center-block" role=""data-dismiss="modal">AGREGAR PROBLEMA</button>
+        <button type="submit" onclick="actualizarProblema()" class="btn btn-default center-block" role=""data-dismiss="modal">MODIFICAR PROBLEMA</button>
       </div>
      </form>
     </div>

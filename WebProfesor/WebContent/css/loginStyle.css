@@ -28,7 +28,7 @@
   font-family: "Trebuchet MS";
   text-transform: uppercase;
   outline: 0;
-  background: #928695;
+  background: #374588;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-  background: #4A235A;
+  background: #273161;
 }
 .form .message {
   margin: 15px 0 0;
@@ -88,7 +88,7 @@
 }
 body {
   /*background-image: url("Imagenes/fondo.jpg");*/
-  background: #0000a4; /* fallback for old browsers */
+  background: #e0e0eb; /* fallback for old browsers */
   /*background: -webkit-linear-gradient(right, #9932CC, #8DC26F);
   background: -moz-linear-gradient(right, #9932CC, #8DC26F);
   background: -o-linear-gradient(right, #9932CC, #8DC26F);

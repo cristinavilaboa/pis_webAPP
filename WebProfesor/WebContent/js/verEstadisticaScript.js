@@ -30,7 +30,7 @@ function load_table(item)
     + "</tr>";
 	$('#tbodyestadisticas').append(eachrow);
 
-	var url = "https://www.dropbox.com/home/" + item.url_problema;
+	var url = item.url_problema;
 	$("#"+item.id_problema).attr("href",url);
 
 }
