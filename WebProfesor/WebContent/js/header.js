@@ -6,9 +6,9 @@ $(function () {
 	$("#addMundo a:contains('Mundo')").parent().addClass("active");
 	$("#addNivel a:contains('Nivel')").parent().addClass("active");
 	$("#addProblema a:contains('Problema')").parent().addClass("active");
-	$("#addMProblema a:contains('ModificarProblema')").parent().addClass("active");
+	$("#addMProblema a:contains('Modificar')").parent().addClass("active");
 	
-	if($("#addMProblema a:contains('ModificarProblema')").parent().hasClass("active")){
+	if($("#addMProblema a:contains('Problema')").parent().hasClass("active")){
 		$(".dropdown a:contains('Modificar')").parent().addClass("active");
 	}
 	

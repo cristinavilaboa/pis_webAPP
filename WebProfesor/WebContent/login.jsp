@@ -4,6 +4,8 @@
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/loginStyle.css" media="screen" />
 <title>Login Profesor</title>
+
+
 <script type="text/javascript">
 	function validarDatos(){
 		var usuario = document.getElementById("usuario");

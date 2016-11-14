@@ -93,7 +93,7 @@
       </div>
       <div class="form-group"></div>
       <div class="form-group">
-        <button type="submit" onclick="actualizarProblema()" class="btn btn-default center-block" role=""data-dismiss="modal">AGREGAR PROBLEMA</button>
+        <button type="submit" onclick="actualizarProblema()" class="btn btn-default center-block" role=""data-dismiss="modal">MODIFICAR PROBLEMA</button>
       </div>
      </form>
     </div>
