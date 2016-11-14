@@ -86,7 +86,7 @@
 					<li><a></a></li>
 				</ul>
 				<ul class="nav navbar-nav">
-					<li><a href="index.jsp" style="color:white;">Inicio</a></li>
+					<li><a href="VerEstadisticas.jsp" style="color:white;">Estadisticas</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">Nuevo<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -96,7 +96,7 @@
 						</ul>
 					</li>
 					<li><a id="msj" href="VerMensajes.jsp" style="color:white;">Mensajes</a></li>
-					<li><a href="VerEstadisticas.jsp" style="color:white;">Estadisticas</a></li>
+					
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white;">Modificar<span class="caret"></span></a>
 						<ul class="dropdown-menu">

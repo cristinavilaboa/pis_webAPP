@@ -34,7 +34,7 @@
 	<h1></h1>
 	<h1></h1>
   	<div class="form">
-    <form class="login-form" action="jsp/index.jsp" method="post" onsubmit="return validarDatos();">
+    <form class="login-form" action="jsp/VerEstadisticas.jsp" method="post" onsubmit="return validarDatos();">
       <input type="text" placeholder="username" id ="usuario"/>
       <input type="password" placeholder="password" id ="password"/>
       <button>login</button>

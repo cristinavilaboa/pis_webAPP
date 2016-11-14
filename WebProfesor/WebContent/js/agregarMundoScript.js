@@ -57,6 +57,6 @@ function guardarMundo(){
 
 			$.ajax(settings).done(function (response) {
 			  //alert("agregobien");
-			  location.href="index.jsp";
+			  location.href="VerEstadistica.jsp";
 			});
 }
