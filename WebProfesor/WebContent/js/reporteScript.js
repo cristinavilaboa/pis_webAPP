@@ -2,7 +2,7 @@
  * 
  */
 function cargarMensaje(){
-	//alert("entro al cargar");
+
 // funcion para obtener parametro de la url (el id del mensaje)
 	(function($) {  
 		    $.get = function(key)   {  
@@ -25,9 +25,7 @@ function cargarMensaje(){
 	var settings = {
   		"async": true,
   		"crossDomain": true,
-  		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensaje?id_mensaje=" + param,
 		"url" : getUrl("vermensaje?id_mensaje=" + param),
-  		//"url": "http://localhost:8080/Servidor/vermensaje?nick=marce_fing&id_mensaje=" + param,
   		"method": "GET",
   		"headers": {
   			"Access-Control-Allow-Origin": "*",
@@ -37,14 +35,10 @@ function cargarMensaje(){
 
 	$.ajax(settings).done(function (response) {		    	    			    	    
 		var mensaje= response;
-		//alert("leyo el msj");
 		$("#asunto").val(mensaje.asunto);
 		$("#remitente").val(mensaje.remitente);
 		$("#contenido").text(mensaje.contenido);
-			 	
-//		var url = "ResponderMensaje.jsp?remitente=" + mensaje.remitente + "&asunto=" + mensaje.asunto;
-//	    $("#responder").attr("href",url);
-			 	
+			 				 	
 		$("#destinatario").val(mensaje.remitente);
 		$("#asuntoEnviar").val(mensaje.asunto);
 		
@@ -55,9 +49,7 @@ function cargarMensaje(){
 	var settings = {
 		"async": true,
 		"crossDomain": true,
-		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/mensajeleido?nick=marce_fing&id_mensaje=" + param,
 	    "url": getUrl("reporteleido?nick=marce_fing&id_mensaje=" + param),
-		//"url": "http://localhost:8080/Servidor/mensajeleido?nick=marce_fing&id_mensaje" + param,
 		"method": "POST",
 		"headers": {
 			"Access-Control-Allow-Origin": "*",
@@ -66,7 +58,7 @@ function cargarMensaje(){
 	}
 
 	$.ajax(settings).done(function (response) {
-		//console.log(response);
+		
 	});
 	
 }
@@ -83,8 +75,6 @@ function guardarMensaje(){
   		"async": true,
   		"crossDomain": true,
 		"url": getUrl("respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing"),
-		//http://servidorgrupo8.azurewebsites.net/Servidor/respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing",
-		
 		"method": "POST",
   		"headers": {
   			"Access-Control-Allow-Origin": "*",
@@ -93,7 +83,6 @@ function guardarMensaje(){
 	}
 
 	$.ajax(settings).done(function (response) {
-		//alert("envio el msj");
 		window.location.href = "VerMensajes.jsp"
 		alert("Mensaje enviado");
 

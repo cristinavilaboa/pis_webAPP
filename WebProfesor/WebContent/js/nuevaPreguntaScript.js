@@ -16,8 +16,6 @@ function cargarMundos(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url":"http://localhost:8080/Servidor/listarmundosprofesor",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarmundosprofesor",
 			  "url": getUrl("listarmundosprofesor"),
 			  "method": "GET",
 			  "headers": {
@@ -43,13 +41,10 @@ function cargarMundos(){
 
 function cargarNiveles(){
 		var id_mundo = $('#lista').val();
-		//alert(id_mundo);
 
 		var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url": "http://localhost:8080/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarnivelesmundoprofesor?id_mundo="+id_mundo,
 			  "url": getUrl("listarnivelesmundoprofesor?id_mundo="+id_mundo),
 			  "method": "GET",
 			  "headers": {
@@ -77,7 +72,6 @@ function cargarNiveles(){
 
 /****FUNCION PARA GUARDAR EL PROBLEMA EN EL SERVIDOR****/
 function guardarProblema(){
-	//alert("entre al guardar");
 	var mundo = $('#lista').val();
 	var nivel = $('#lista2 option:selected').html();
 	var resp = $('#respuesta').val();
@@ -85,12 +79,9 @@ function guardarProblema(){
 	var puntos = $('#puntaje').val();
 	var desc = $('#descripcion').val();
 	var URLimagen = $('#imagenP').val();
-	//alert(nivel);//+" "+nivel+" "+resp+" "+ayuda+" "+puntos+" "+desc+" "path);
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
 			  "url": getUrl("agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + URLimagen + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
 			  "method": "POST",
 			  "headers": {
@@ -100,7 +91,6 @@ function guardarProblema(){
 			}
 
 			$.ajax(settings).done(function (response) {
-			  //alert("agregobien");
 			  $('#myModal').hide();
 			  alert("Problema agregado");
 			});

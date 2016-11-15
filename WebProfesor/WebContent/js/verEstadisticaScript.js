@@ -3,6 +3,7 @@
  */
 var estadisticas;
 
+/***funcion para otrener el porcentaje***/
 function porcentage(item)
 {
 	if (item.cant_intentos > 0)
@@ -51,8 +52,6 @@ function cargarEstadisticas(){
 	var settings = {
 	  		"async": false,
 	  		"crossDomain": true,
-	  		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/verestadisticas",
-			  //"url": "http://localhost:8080/Servidor/verestadisticas",
 	  		"url":getUrl("verestadisticas"),
 			"method": "GET",
 	  		"headers": {
@@ -74,8 +73,6 @@ function CargarRanking()
 	  		"async": true,
 	  		"crossDomain": true,
 	  		"url": getUrl("verranking"),
-	  		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/verranking",
-			  //"url": "http://localhost:8080/Servidor/verranking",
 	  		"method": "GET",
 	  		"headers": {
 	  			"Access-Control-Allow-Origin": "*",
@@ -85,7 +82,6 @@ function CargarRanking()
 			
 	$.ajax(settings).done(function (response) {
 		var estadisticas= response.listaPuntos;
-		//alert("entra");
 		$.each(estadisticas, function (index, item) {
 			
     		var eachrow = "<tr>"

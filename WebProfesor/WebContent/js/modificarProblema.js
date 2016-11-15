@@ -5,12 +5,11 @@
 var problemas
 var problema 
 
+/************FUNCION PARA TRAER LOS PROBLEMAS DEL SERVIDOR*************/
 function cargarProblemas(){
 
 		var id_mundo =$('#lista').val();
 		var id_nivel = $('#lista2').val();
-
-		//alert(id_mundo);
 
 		var settings = {
 			  "async": true,
@@ -39,6 +38,8 @@ function cargarProblemas(){
 			});
 };
 
+
+/***********FUNCION PARA TRAER LOS DATOS DEL PROBLEMA SELECCIONADO***********/
 function cargar_datos_problema()
 {
 	habilitarCrear();
@@ -62,9 +63,8 @@ function cargar_datos_problema()
 	
 }
 
-
+/*************FUNCION QUE ENVÍA LOS CAMBIOS AL SERVIDOR************/
 function actualizarProblema(){
-	//alert("entre al guardar");
 	var mundo = $('#lista').val();
 	var nivel = $('#lista2 option:selected').html();
 	var resp = $('#respuesta').val();
@@ -77,8 +77,6 @@ function actualizarProblema(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url": "http://localhost:8080/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarproblema?desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + path + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing",
 			  "url": getUrl("modificarproblema?id_problema=" + getproblemaid + "&desc=" + desc + "&resp=" + resp + "&exp=" + puntos + "&ayuda=" + ayuda + "&cont=" + URLimagen + "&id_mundo=" + mundo + "&num_nivl=" + nivel + "&nick_prof=marce_fing"),
 			  "method": "POST",
 			  "headers": {
@@ -88,7 +86,6 @@ function actualizarProblema(){
 			}
 
 			$.ajax(settings).done(function (response) {
-			  //alert("agregobien");
 			  $('#myModal').hide();
 			  alert("Problema Modificado");
 			  window.location.href = "../jsp/index.jsp"

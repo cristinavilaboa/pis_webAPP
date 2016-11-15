@@ -7,8 +7,6 @@ function cargarMensajes(){
 	var settings = {
 		"async": true,
 		"crossDomain": true,
-		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesnuevos?nick=marce_fing",
-	  	//"url": "http://localhost:8080/Servidor/vermensajesnuevos?nick=marce_fing",
 		"url": getUrl("vermensajesnuevos?nick=marce_fing"),
 	  	"method": "GET",
 		"headers": {
@@ -51,8 +49,6 @@ var url = "Mensaje.jsp?source=" + item.id;
 	var settings2 = {
 		"async": true,
 		"crossDomain": true,
-		//"url": "http://servidorgrupo8.azurewebsites.net/Servidor/vermensajesviejos?nick=marce_fing",
-	  //"url": "http://localhost:8080/Servidor/vermensajesviejos?nick=marce_fing",
 		"url": getUrl("vermensajesviejos?nick=marce_fing"),
 		"method": "GET",
 		"headers": {
@@ -63,13 +59,11 @@ var url = "Mensaje.jsp?source=" + item.id;
 
 	$.ajax(settings2).done(function (response) {		
 		var msjs2= response.mensajes;
-		//alert("hola");
 		
 	if (msjs2.length > 0){
 		$.each(msjs2, function (index, item) {
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
-			//alert(date);
 			
 			var url = "Mensaje.jsp?source=" + item.id;
 			
@@ -112,7 +106,6 @@ $.ajax(settings2).done(function (response) {
 		$.each(rep1, function (index, item) {
 			var dateStr = JSON.parse(item.fecha);          
 			var date = new Date(dateStr);
-			//alert(date);
 			var url = "Reporte.jsp?source=" + item.id;
 			
 			var eachrow = "<tr data-href=" + url + ">"
@@ -153,7 +146,6 @@ $.ajax(settings2).done(function (response) {
 			$.each(rep2, function (index, item) {
 				var dateStr = JSON.parse(item.fecha);          
 				var date = new Date(dateStr);
-				//alert(date);
 				var url = "Reporte.jsp?source=" + item.id;
 				
 				var eachrow = "<tr data-href=" + url + ">"

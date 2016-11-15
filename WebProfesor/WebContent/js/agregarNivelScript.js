@@ -7,8 +7,6 @@ function cargarMundos(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url":"http://localhost:8080/Servidor/listarmundosprofesor",
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/listarmundosprofesor",
 			  "url":getUrl("listarmundosprofesor"),
 			  "method": "GET",
 			  "headers": {
@@ -38,8 +36,6 @@ function AgregarNivel(){
 	var settings = {
 			  "async": true,
 			  "crossDomain": true,
-			  //"url": "http://localhost:8080/Servidor/agregarnivel?id_mundo=" + id_mundo,
-			  //"url": "http://servidorgrupo8.azurewebsites.net/Servidor/agregarnivel?id_mundo=" + id_mundo,
 			  "url": getUrl("agregarnivel?id_mundo=" + id_mundo),
 			  "method": "POST",
 			  "headers": {
