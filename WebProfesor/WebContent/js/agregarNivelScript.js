@@ -46,7 +46,7 @@ function AgregarNivel(){
 
 			$.ajax(settings).done(function (response) {
 				alert("Nivel agregado");
-			 	location.href="index.html";
+				window.location.href = "../jsp/VerEstadisticas.jsp"
 			});
 }
 

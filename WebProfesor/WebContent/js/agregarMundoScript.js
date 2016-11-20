@@ -20,6 +20,7 @@ function guardarMundo(){
 			}
 
 			$.ajax(settings).done(function (response) {
-			  location.href="VerEstadistica.jsp";
+				alert ("Mundo Agregado");
+				window.location.href = "../jsp/VerEstadisticas.jsp"
 			});
 }

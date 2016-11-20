@@ -92,7 +92,8 @@ function guardarProblema(){
 
 			$.ajax(settings).done(function (response) {
 			  $('#myModal').hide();
-			  alert("Problema agregado");
+			  alert("Problema Agregado");
+			  window.location.href = "../jsp/VerEstadisticas.jsp"
 			});
 
 }

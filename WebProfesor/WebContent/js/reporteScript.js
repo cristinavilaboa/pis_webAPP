@@ -63,32 +63,4 @@ function cargarMensaje(){
 	
 }
 
-/****************RESPONDER MENSAJE**************/
-
-function guardarMensaje(){
-	
-	var destinatario = $('#destinatario').val();
-	var asunto = $('#asuntoEnviar').val();
-	var contenido = $('#mensajeEnviar').val();
-	
-	var settings = {
-  		"async": true,
-  		"crossDomain": true,
-		"url": getUrl("respondermensaje?nick_jugador=" + destinatario + "&asunto=" + asunto + "&contenido=" + contenido + "&id_profesor=marce_fing"),
-		"method": "POST",
-  		"headers": {
-  			"Access-Control-Allow-Origin": "*",
-    		"cache-control": "no-cache",
-  		}
-	}
-
-	$.ajax(settings).done(function (response) {
-		window.location.href = "VerMensajes.jsp"
-		alert("Mensaje enviado");
-
-	});
-	
-	
-
-}
 

@@ -88,7 +88,7 @@ function actualizarProblema(){
 			$.ajax(settings).done(function (response) {
 			  $('#myModal').hide();
 			  alert("Problema Modificado");
-			  window.location.href = "../jsp/index.jsp"
+			  window.location.href = "../jsp/VerEstadisticas.jsp"
 			});
 
 }
